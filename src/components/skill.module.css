@@ -1,0 +1,48 @@
+.bg {
+  background-color: var(--dark);
+  height: 100vh;
+}
+.backDrop {
+  position: absolute;
+  top: 5%;
+  left: 30%;
+  width: 50.777rem;
+  height: 50.777rem;
+  background: var(--bigShadow);
+  border: 9px inset #489250;
+  border-radius: 50%;
+  animation: identifier 3s linear infinite;
+}
+
+.me {
+  position: absolute;
+  top: 40%;
+  left: 47%;
+  width: 10rem;
+  border: 7px outset #489250;
+
+  border-radius: 50%;
+}
+@keyframes identifier {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 768px) {
+  .backDrop {
+    width: 24rem;
+    height: 24rem;
+    top: 20%;
+    left: 0;
+  }
+  .me {
+    width: 5rem;
+    border: 7px dashed #489250;
+    border-radius: 50%;
+    top: 38%;
+    left: 40%;
+  }
+}
