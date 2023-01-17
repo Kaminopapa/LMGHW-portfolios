@@ -13,6 +13,7 @@
     rgba(6, 6, 6, 0) 100%
   );
   --i: 0;
+  --h3Color: rgb(119, 114, 114);
 }
 * {
   padding: 0;
@@ -29,4 +30,12 @@ body::-webkit-scrollbar {
 body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+h3 {
+  color: var(--h3Color);
+  font-weight: bold;
+}
+h1 {
+  color: #fff;
+  font-weight: bold;
 }

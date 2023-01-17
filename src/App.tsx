@@ -7,6 +7,7 @@ function App() {
     <main>
       <Skills />
       <Card />
+      <a href="">hello</a>
     </main>
   );
 }

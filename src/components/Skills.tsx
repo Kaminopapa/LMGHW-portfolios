@@ -3,69 +3,174 @@ import { RiVuejsLine } from "react-icons/ri";
 import { FaLaravel, FaGithub, FaFigma, FaPhp, FaReact } from "react-icons/fa";
 import { SiNextdotjs, SiRedux, SiTypescript } from "react-icons/si";
 import { IoLogoJavascript, IoLogoCss3, IoLogoNodejs } from "react-icons/io";
-import { useState } from "react";
-
+import React, { useState } from "react";
 const Skills = () => {
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(1);
   const position = (val: number) => {
     return { "--i": val } as React.CSSProperties;
   };
-
+  const handleActive = (id: number) => {
+    const activeElement = icons.find((item) => item.id === id);
+    activeElement && setActive(id);
+    console.log(active);
+  };
+  const icons = [
+    {
+      id: 1,
+      logo: <FaGithub color="#F51212" className="logo" />,
+      name: "See my jobs",
+      links: [{ name: "github", url: "https://github.com/Kaminopapa" }],
+    },
+    {
+      id: 2,
+      logo: <FaLaravel color="#F22B1D" className="logo" />,
+      name: "Laravel",
+      links: [
+        { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com" },
+      ],
+    },
+    {
+      id: 3,
+      logo: <SiNextdotjs color="white" className="logo" />,
+      name: "Next.js",
+      links: [
+        { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com" },
+      ],
+    },
+    {
+      id: 4,
+      logo: <IoLogoJavascript color="yellow" className="logo" />,
+      name: "JavaScript",
+      links: [
+        { name: "Welcome to Venezuela", url: "https://kaminopapa.github.io/" },
+        { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com" },
+      ],
+    },
+    {
+      id: 5,
+      logo: <IoLogoCss3 color="blue" className="logo" />,
+      name: "CSS",
+      links: [
+        {
+          name: "Miley Deign",
+          url: "https://kaminopapa.github.io/MileyDesignn/",
+        },
+        { name: "Welcome to Venezuela", url: "https://kaminopapa.github.io/" },
+        { name: "One Book", url: "https://one-book.netlify.app/" },
+      ],
+    },
+    {
+      id: 6,
+      logo: <IoLogoNodejs color="lightGreen" className="logo" />,
+      name: "Node.js",
+      links: [{ name: "One Book", url: "https://one-book.netlify.app/" }],
+    },
+    {
+      id: 7,
+      logo: <FaFigma color="pink" className="logo" />,
+      name: "Figma",
+      links: [{ name: "figma", url: "" }],
+    },
+    {
+      id: 8,
+      logo: <SiRedux color="purple" className="logo" />,
+      name: "redux",
+      links: [
+        { name: "One Book", url: "https://one-book.netlify.app/" },
+        { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com" },
+      ],
+    },
+    {
+      id: 9,
+      logo: <FaPhp color="purple" className="logo" />,
+      name: "PhP",
+      links: [
+        { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com" },
+      ],
+    },
+    {
+      id: 10,
+      logo: <FaReact color="lightblue" className="logo" />,
+      name: "React",
+      links: [
+        {
+          name: "Miley Deign",
+          url: "https://kaminopapa.github.io/MileyDesignn/",
+        },
+        { name: "Course Resgister", url: "https://studynet.netlify.app/" },
+        { name: "One Book", url: "https://one-book.netlify.app/" },
+        { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com" },
+      ],
+    },
+    {
+      id: 11,
+      logo: <SiTypescript color="lightblue" className="logo" />,
+      name: "TypeScript",
+      links: [
+        { name: "One Book", url: "https://one-book.netlify.app/" },
+        { name: "Unidiy", url: ' "https://unidiy-image-editor.weivee.com"' },
+      ],
+    },
+    {
+      id: 12,
+      logo: <RiVuejsLine color="green" className="logo" />,
+      name: "Vue.js",
+      links: [
+        { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com" },
+      ],
+    },
+  ];
+  const other = icons.map((item, index = 1) => {
+    return (
+      <div
+        className={item.id == active ? "contentBX active" : "contentBX"}
+        id={`content${index}`}
+        key={item.id}
+      >
+        <div className="card">
+          <div className="icon_box">{item.logo}</div>
+          <div className="textBx">
+            <h2>{item.name}</h2>
+            <ul className="sci">
+              {item.links.map((link) => (
+                <li>
+                  <a href={link.url} target="_blank">
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    );
+  });
   return (
     <div className="bg">
+      <div className="head">
+        <h3>what skills i have</h3>
+        <h1>That's all but not all</h1>
+      </div>
       <div className="icon_container">
-        {active && (
-          <div className="icon">
-            <div className="icon_box" style={position(1)}>
-              <FaGithub color="#F51212" className="logo" />
-            </div>
-            <div className="icon_box" style={position(2)}>
-              <FaLaravel color="#F22B1D" className="logo" />
-            </div>
-            <div className="icon_box" style={position(3)}>
-              <SiNextdotjs color="white" className="logo" />
-            </div>
-            <div className="icon_box" style={position(4)}>
-              <IoLogoJavascript color="yellow" className="logo" />
-            </div>
-            <div className="icon_box" style={position(5)}>
-              <IoLogoCss3 color="blue" className="logo" />
-            </div>
-            <div className="icon_box" style={position(6)}>
-              <IoLogoNodejs color="lightGreen" className="logo" />
-            </div>
-            <div className="icon_box" style={position(7)}>
-              <FaFigma color="pink" className="logo" />
-            </div>
-            <div className="icon_box" style={position(8)}>
-              <SiRedux color="purple" className="logo" />
-            </div>
-            <div className="icon_box" style={position(9)}>
-              <FaPhp color="purple" className="logo" />
-            </div>
-            <div className="icon_box" style={position(10)}>
-              <FaReact color="lightblue" className="logo" />
-            </div>
-            <div className="icon_box" style={position(11)}>
-              <SiTypescript color="lightblue" className="logo" />
-            </div>
-            <div className="icon_box" style={position(12)}>
-              <RiVuejsLine color="green" className="logo" />
-            </div>
-          </div>
-        )}
+        <div className="icon">
+          {icons.map((icon, index = 1) => {
+            return (
+              <div
+                className={icon.id === active ? "icon_box active" : "icon_box"}
+                style={position(index)}
+                key={icon.id}
+                onClick={() => handleActive(icon.id)}
+                data-id={`content${index}`}
+                onMouseEnter={() => handleActive(icon.id)}
+              >
+                {icon.logo}
+              </div>
+            );
+          })}
+        </div>
       </div>
 
-      <div className={active == true ? "content" : "hide"}>
-        <img
-          src="/me.png"
-          alt="me"
-          className="me"
-          onClick={() => {
-            setActive(!active);
-          }}
-        />
-      </div>
+      <div className="content">{other}</div>
     </div>
   );
 };
