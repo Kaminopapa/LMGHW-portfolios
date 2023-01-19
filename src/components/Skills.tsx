@@ -4,6 +4,8 @@ import { FaLaravel, FaGithub, FaFigma, FaPhp, FaReact } from "react-icons/fa";
 import { SiNextdotjs, SiRedux, SiTypescript } from "react-icons/si";
 import { IoLogoJavascript, IoLogoCss3, IoLogoNodejs } from "react-icons/io";
 import React, { useState } from "react";
+
+import { MdOutlineVisibility } from "react-icons/md";
 const Skills = () => {
   const [active, setActive] = useState(1);
   const position = (val: number) => {
@@ -42,8 +44,8 @@ const Skills = () => {
       logo: <IoLogoJavascript color="yellow" className="logo" />,
       name: "JavaScript",
       links: [
-        { name: "Welcome to Venezuela", url: "https://kaminopapa.github.io/" },
         { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com" },
+        { name: "Welcome to Venezuela", url: "https://kaminopapa.github.io/" },
       ],
     },
     {
@@ -51,12 +53,12 @@ const Skills = () => {
       logo: <IoLogoCss3 color="blue" className="logo" />,
       name: "CSS",
       links: [
+        { name: "One Book", url: "https://one-book.netlify.app/" },
         {
           name: "Miley Deign",
           url: "https://kaminopapa.github.io/MileyDesignn/",
         },
         { name: "Welcome to Venezuela", url: "https://kaminopapa.github.io/" },
-        { name: "One Book", url: "https://one-book.netlify.app/" },
       ],
     },
     {
@@ -76,8 +78,8 @@ const Skills = () => {
       logo: <SiRedux color="purple" className="logo" />,
       name: "redux",
       links: [
-        { name: "One Book", url: "https://one-book.netlify.app/" },
         { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com" },
+        { name: "One Book", url: "https://one-book.netlify.app/" },
       ],
     },
     {
@@ -93,13 +95,13 @@ const Skills = () => {
       logo: <FaReact color="lightblue" className="logo" />,
       name: "React",
       links: [
+        { name: "One Book", url: "https://one-book.netlify.app/" },
+        { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com" },
         {
           name: "Miley Deign",
           url: "https://kaminopapa.github.io/MileyDesignn/",
         },
         { name: "Course Resgister", url: "https://studynet.netlify.app/" },
-        { name: "One Book", url: "https://one-book.netlify.app/" },
-        { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com" },
       ],
     },
     {
@@ -107,8 +109,8 @@ const Skills = () => {
       logo: <SiTypescript color="lightblue" className="logo" />,
       name: "TypeScript",
       links: [
-        { name: "One Book", url: "https://one-book.netlify.app/" },
         { name: "Unidiy", url: ' "https://unidiy-image-editor.weivee.com"' },
+        { name: "One Book", url: "https://one-book.netlify.app/" },
       ],
     },
     {
@@ -130,12 +132,12 @@ const Skills = () => {
         <div className="card">
           <div className="icon_box">{item.logo}</div>
           <div className="textBx">
-            <h2>{item.name}</h2>
+            {/* <h2>{item.name}</h2> */}
             <ul className="sci">
               {item.links.map((link) => (
-                <li>
+                <li key={crypto.randomUUID()}>
                   <a href={link.url} target="_blank">
-                    {link.name}
+                    <MdOutlineVisibility />
                   </a>
                 </li>
               ))}
