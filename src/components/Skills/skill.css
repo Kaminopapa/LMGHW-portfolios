@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   flex-flow: row;
+  position: relative;
 }
 
 .head {
@@ -19,6 +20,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
 }
 .iconContainer .icon_bg {
   position: absolute;
@@ -73,7 +75,6 @@
 
 .content {
   height: 100%;
-  position: absolute;
   inset: 0;
   overflow: hidden;
   display: flex;
