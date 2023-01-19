@@ -148,7 +148,7 @@ const Skills = () => {
     );
   });
   return (
-    <div className="bg">
+    <div className="bg ">
       <div className="head">
         <h3>what skills i have</h3>
         <h1>That's all but not all</h1>

@@ -1,9 +1,10 @@
 .bg {
-  background-color: var(--dark);
+  width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--dark);
   flex-flow: row;
   position: relative;
 }
@@ -192,6 +193,9 @@
   .head {
     top: 5%;
   }
+  .iconContainer {
+    width: var(--desktopSize);
+  }
   .iconContainer .icon_bg {
     width: 45.777rem;
     height: 45.777rem;
@@ -203,7 +207,7 @@
     height: 50px;
   }
   .content {
-    width: 100%;
+    width: var(--desktopSize);
   }
   .content .contentBX .card .icon_box {
     width: 300px;

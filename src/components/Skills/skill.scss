@@ -1,9 +1,10 @@
 .bg {
-  background-color: var(--dark);
+  width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--dark);
   flex-flow: row;
   position: relative;
 }
@@ -211,6 +212,7 @@
     top: 5%;
   }
   .iconContainer {
+    width: var(--desktopSize);
     .icon_bg {
       width: 45.777rem;
       height: 45.777rem;
@@ -227,7 +229,7 @@
   }
 
   .content {
-    width: 100%;
+    width: var(--desktopSize);
 
     // &::after {
     //   inset: 10rem;
