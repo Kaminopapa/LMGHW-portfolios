@@ -65,14 +65,13 @@
 }
 
 .content {
-  height: 50%;
+  height: 100%;
   position: absolute;
   inset: 0;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 25%;
 }
 .content .contentBX {
   position: absolute;
@@ -196,10 +195,7 @@
     height: 50px;
   }
   .content {
-    top: 5%;
-    width: 50%;
-    height: 100%;
-    left: 25%;
+    width: 100%;
   }
   .content .contentBX .card .icon_box {
     width: 300px;

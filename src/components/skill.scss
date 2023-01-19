@@ -68,14 +68,14 @@
 }
 
 .content {
-  height: 50%;
+  height: 100%;
   position: absolute;
   inset: 0;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 25%;
+
   // &::before {
   //   content: "";
   //   position: absolute;
@@ -216,10 +216,8 @@
   }
 
   .content {
-    top: 5%;
-    width: 50%;
-    height: 100%;
-    left: 25%;
+    width: 100%;
+
     // &::after {
     //   inset: 10rem;
     // }
