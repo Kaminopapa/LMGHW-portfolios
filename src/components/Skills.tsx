@@ -153,22 +153,26 @@ const Skills = () => {
         <h3>what skills i have</h3>
         <h1>That's all but not all</h1>
       </div>
-      <div className="icon_container">
-        <div className="icon">
-          {icons.map((icon, index = 1) => {
-            return (
-              <div
-                className={icon.id === active ? "icon_box active" : "icon_box"}
-                style={position(index)}
-                key={icon.id}
-                onClick={() => handleActive(icon.id)}
-                data-id={`content${index}`}
-                onMouseEnter={() => handleActive(icon.id)}
-              >
-                {icon.logo}
-              </div>
-            );
-          })}
+      <div className="iconContainer">
+        <div className="icon_bg">
+          <div className="icon">
+            {icons.map((icon, index = 1) => {
+              return (
+                <div
+                  className={
+                    icon.id === active ? "icon_box active" : "icon_box"
+                  }
+                  style={position(index)}
+                  key={icon.id}
+                  onClick={() => handleActive(icon.id)}
+                  data-id={`content${index}`}
+                  onMouseEnter={() => handleActive(icon.id)}
+                >
+                  {icon.logo}
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
 

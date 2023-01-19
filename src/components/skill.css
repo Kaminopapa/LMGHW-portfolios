@@ -13,7 +13,14 @@
   text-align: center;
 }
 
-.icon_container {
+.iconContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.iconContainer .icon_bg {
   position: absolute;
   width: 20rem;
   height: 20rem;
@@ -22,7 +29,7 @@
   border-radius: 50%;
   /* animation: identifier 10s linear infinite; */
 }
-.icon_container .icon {
+.iconContainer .icon_bg .icon {
   position: absolute;
   left: -50%;
   width: 100%;
@@ -33,7 +40,7 @@
   cursor: pointer;
   transition: 0.5s;
 }
-.icon_container .icon .icon_box {
+.iconContainer .icon_bg .icon .icon_box {
   position: absolute;
   width: 30px;
   height: 30px;
@@ -44,14 +51,14 @@
   z-index: 100;
   overflow: hidden;
 }
-.icon_container .icon .icon_box.active {
+.iconContainer .icon_bg .icon .icon_box.active {
   border: 2px solid white;
   transition: border 0.1s ease;
 }
-.icon_container .icon .icon_box.active .logo {
+.iconContainer .icon_bg .icon .icon_box.active .logo {
   filter: grayscale(0);
 }
-.icon_container .icon .icon_box .logo {
+.iconContainer .icon_bg .icon .icon_box .logo {
   position: absolute;
   top: 0;
   left: 0;
@@ -184,12 +191,12 @@
   .head {
     top: 5%;
   }
-  .icon_container {
+  .iconContainer .icon_bg {
     width: 45.777rem;
     height: 45.777rem;
     margin-top: 5rem;
   }
-  .icon_container .icon .icon_box {
+  .iconContainer .icon_bg .icon .icon_box {
     transform-origin: 392px;
     width: 50px;
     height: 50px;
