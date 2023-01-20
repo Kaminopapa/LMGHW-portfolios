@@ -1,5 +1,5 @@
 const AboutMe = () => {
-  return <div style={{ position: "relative" }}>AboutMe</div>;
+  return <div></div>;
 };
 
 export default AboutMe;
