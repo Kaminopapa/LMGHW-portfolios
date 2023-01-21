@@ -4,15 +4,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--dark);
-  flex-flow: row;
+  flex-flow: column;
   position: relative;
-}
-
-.head {
-  position: absolute;
-  top: 10%;
-  text-align: center;
 }
 
 .iconContainer {
@@ -104,8 +97,8 @@
 }
 .content .contentBX .card .icon_box {
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   overflow: hidden;
 }
 .content .contentBX .card .icon_box .logo {
@@ -190,28 +183,36 @@
   }
 }
 @media (min-width: 1090px) {
-  .head {
-    top: 0;
-  }
   .iconContainer {
     width: var(--desktopSize);
   }
   .iconContainer .icon_bg {
-    width: 42.777rem;
-    height: 42.777rem;
+    width: 40.777rem;
+    height: 40.777rem;
     margin-top: 5rem;
   }
   .iconContainer .icon_bg .icon .icon_box {
-    transform-origin: 365px;
+    transform-origin: 350px;
     width: 50px;
     height: 50px;
+  }
+  .iconContainer .icon_bg .icon .icon_box.active {
+    width: 70px;
+    height: 70px;
+    transform-origin: 360px;
+  }
+  .iconContainer .icon_bg .icon .icon_box.active .logo {
+    scale: 0.9;
   }
   .content {
     width: var(--desktopSize);
   }
+  .content .contentBX {
+    margin-top: 5%;
+  }
   .content .contentBX .card .icon_box {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
   }
   .content .contentBX .card .textBx h2 {
     font-size: 2em;

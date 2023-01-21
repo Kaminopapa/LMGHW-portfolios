@@ -4,6 +4,7 @@ import { FaLaravel, FaGithub, FaFigma, FaPhp, FaReact } from "react-icons/fa";
 import { SiNextdotjs, SiRedux, SiTypescript } from "react-icons/si";
 import { IoLogoJavascript, IoLogoCss3, IoLogoNodejs } from "react-icons/io";
 import React, { useState } from "react";
+import Header from "../UI/Header/Header";
 
 import { MdOutlineVisibility } from "react-icons/md";
 const Skills = () => {
@@ -33,7 +34,7 @@ const Skills = () => {
     },
     {
       id: 3,
-      logo: <SiNextdotjs color="white" className="logo" />,
+      logo: <SiNextdotjs color="gray" className="logo" />,
       name: "Next.js",
       links: [
         { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com" },
@@ -149,10 +150,10 @@ const Skills = () => {
   });
   return (
     <div className="bg ">
-      <div className="head">
-        <h3>what skills i have</h3>
-        <h1>That's all but not all</h1>
-      </div>
+      <Header
+        subTitle="what skills i have"
+        mainTitle="That's all but not all"
+      />
       <div className="iconContainer">
         <div className="icon_bg">
           <div className="icon">

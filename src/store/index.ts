@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import navReducer from "./navSlice";
+import dayNightReducer from "./dayNightSlice";
 const store = configureStore({
   reducer: {
     select_nav: navReducer,
+    day_night_mode: dayNightReducer,
   },
 });
 
