@@ -5,7 +5,7 @@ import { toggleMode } from "../../../store/dayNightSlice";
 const Handle = () => {
   const dispatch = useAppDispatch();
 
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(true);
   const handleActive = () => {
     setActive(!active);
     dispatch(toggleMode(active));

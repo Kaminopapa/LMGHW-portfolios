@@ -2,7 +2,7 @@
   position: absolute;
   width: 5px;
 
-  background-color: brown;
+  background-color: var(--handle-color);
   top: 0;
   z-index: 200;
   right: 10%;
@@ -14,7 +14,7 @@
   display: block;
   width: 10px;
   height: 10px;
-  background-color: brown;
+  background-color: var(--handle-color);
   position: absolute;
   bottom: -9%;
   left: -0.17rem;

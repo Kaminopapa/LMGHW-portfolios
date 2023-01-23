@@ -1,0 +1,39 @@
+.portfolio_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+.portfolio_container .cards_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio_container .cards_container .card {
+  width: 50%;
+  height: 20%;
+  position: absolute;
+  background: rgba(68, 63, 63, 0.22);
+  border-top: 4px solid #489250;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+}
+.portfolio_container .cards_container .card.active {
+  transform: scale(1);
+  z-index: 10;
+}
+.portfolio_container .cards_container .card.left {
+  left: 0;
+}
+.portfolio_container .cards_container .card.right {
+  right: 0;
+}
+.portfolio_container .cards_container .card.back {
+  top: 35%;
+}/*# sourceMappingURL=portfolio.css.map */

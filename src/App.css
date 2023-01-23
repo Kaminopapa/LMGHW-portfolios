@@ -23,6 +23,7 @@
   --color-light: rgba(255, 255, 255, 0.6);
   --color-primary: #489250;
   --color-primary-variant: rgba(114, 233, 156, 0.4);
+  --handle-color: rgba(139, 62, 62, 0.89);
 }
 * {
   padding: 0;
