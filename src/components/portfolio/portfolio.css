@@ -9,7 +9,6 @@
 .portfolio_container .cards_container {
   width: 300px;
   height: 450px;
-  border: 1px dashed #fff;
   perspective: 1000px;
   position: relative;
 }
@@ -18,7 +17,7 @@
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transition: 1s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: 1.5s cubic-bezier(0.77, 0, 0.175, 1);
 }
 .portfolio_container .cards_container .card_box .card {
   position: absolute;
@@ -37,48 +36,57 @@
   transform: rotateY(0) translateZ(700px);
 }
 .portfolio_container .cards_container .card_box .card:nth-child(2) {
-  transform: rotateY(40deg) translateZ(700px);
+  transform: rotateY(72deg) translateZ(700px);
 }
 .portfolio_container .cards_container .card_box .card:nth-child(3) {
-  transform: rotateY(80deg) translateZ(700px);
+  transform: rotateY(144deg) translateZ(700px);
 }
 .portfolio_container .cards_container .card_box .card:nth-child(4) {
-  transform: rotateY(120deg) translateZ(700px);
+  transform: rotateY(216deg) translateZ(700px);
 }
 .portfolio_container .cards_container .card_box .card:nth-child(5) {
-  transform: rotateY(160deg) translateZ(700px);
+  transform: rotateY(288deg) translateZ(700px);
 }
-.portfolio_container .cards_container .card_box .card img {
-  width: 100%;
-  height: 100%;
+.portfolio_container .indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10%;
+}
+.portfolio_container .indicators div {
+  width: 1rem;
+  height: 1rem;
+  margin: 5px;
+  border-radius: 10%;
+  background-color: var(--light);
+}
+.portfolio_container .indicators div.active {
+  background-color: var(--color-primary);
+  color: var(--light);
+}
+.portfolio_container .indicators .prev,
+.portfolio_container .indicators .next {
+  color: var(--light);
+  font-size: 4rem;
+}
+.portfolio_container .indicators .prev.noClick,
+.portfolio_container .indicators .next.noClick {
+  pointer-events: none;
+  opacity: 0.5;
 }
 
-@-webkit-keyframes cardRotate {
-  0%, 20% {
-    transform: translateZ(-700px) rotateY(0);
+@media (min-width: 1800px) {
+  .portfolio_container .indicators {
+    bottom: 0;
   }
-  45% {
-    transform: translateZ(-700px) rotateY(-60deg);
+  .portfolio_container .indicators div {
+    width: 30px;
+    height: 5px;
   }
-  65% {
-    transform: translateZ(-700px) rotateY(-480deg);
-  }
-  100% {
-    transform: translateZ(-700px) rotateY(-960deg);
-  }
-}
-
-@keyframes cardRotate {
-  0%, 20% {
-    transform: translateZ(-700px) rotateY(0);
-  }
-  45% {
-    transform: translateZ(-700px) rotateY(-60deg);
-  }
-  65% {
-    transform: translateZ(-700px) rotateY(-480deg);
-  }
-  100% {
-    transform: translateZ(-700px) rotateY(-960deg);
+  .portfolio_container .indicators .prev,
+.portfolio_container .indicators .next {
+    color: white;
+    font-size: 2rem;
   }
 }/*# sourceMappingURL=portfolio.css.map */

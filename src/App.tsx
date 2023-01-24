@@ -1,5 +1,5 @@
 import Skills from "./components/Skills/Skills";
-import Card from "./components/UI/RotateCard/RotateCard";
+
 import Handle from "./components/UI/switch/Handle";
 import Portfolio from "./components/portfolio/Portfolio";
 import AboutMe from "./components/About_me/AboutMe";

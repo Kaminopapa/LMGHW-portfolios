@@ -128,7 +128,7 @@ const Skills = () => {
       <div
         className={item.id == active ? "contentBX active" : "contentBX"}
         id={`content${index}`}
-        key={item.id}
+        key={"s" + item.id}
       >
         <div className="card">
           <div className="icon_box">{item.logo}</div>

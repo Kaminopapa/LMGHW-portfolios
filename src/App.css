@@ -1,3 +1,8 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap);
+@font-face {
+  font-family: dune_Rise;
+  src: url(Dune_Rise.otf);
+}
 :root {
   --dark: #060606;
   --light: #ffffff;
@@ -40,10 +45,16 @@ body::-webkit-scrollbar {
 body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  font-family: Poppins, sans-serif;
+  line-height: 1.7;
+}
+h1,
+h2 {
+  font-family: dune_Rise;
 }
 h3 {
   color: var(--h3Color);
-  font-weight: bold;
+  font-weight: 500;
 }
 h1 {
   color: #fff;
@@ -91,6 +102,13 @@ h1 {
 }
 .main_container.light .portfolio_container {
   background-color: var(--light);
+}
+.main_container.light .portfolio_container .indicators div {
+  border: 1px solid var(--dark);
+}
+.main_container.light .portfolio_container .indicators .prev,
+.main_container.light .portfolio_container .indicators .next {
+  color: var(--dark);
 }
 .main_container.light nav a,
 .main_container.light nav {

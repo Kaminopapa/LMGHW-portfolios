@@ -1,0 +1,67 @@
+.about_me_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+.about_me_container .me_content {
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about_me_container .me_content img {
+  width: 400px;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: rotateY(180deg);
+  -webkit-animation: anim 30s linear infinite;
+          animation: anim 30s linear infinite;
+}
+
+@-webkit-keyframes anim {
+  0% {
+    border-radius: 21% 39% 39% 50%/37% 48% 52% 36%;
+  }
+  20% {
+    border-radius: 46% 36% 45% 64%/78% 67% 29% 23%;
+  }
+  40% {
+    border-radius: 57% 39% 39% 50%/69% 48% 52% 16%;
+  }
+  60% {
+    border-radius: 57% 39% 39% 50%/69% 48% 52% 16%;
+  }
+  80% {
+    border-radius: 46% 36% 45% 64%/78% 67% 29% 23%;
+  }
+  100% {
+    border-radius: 21% 39% 39% 50%/37% 48% 52% 36%;
+  }
+}
+
+@keyframes anim {
+  0% {
+    border-radius: 21% 39% 39% 50%/37% 48% 52% 36%;
+  }
+  20% {
+    border-radius: 46% 36% 45% 64%/78% 67% 29% 23%;
+  }
+  40% {
+    border-radius: 57% 39% 39% 50%/69% 48% 52% 16%;
+  }
+  60% {
+    border-radius: 57% 39% 39% 50%/69% 48% 52% 16%;
+  }
+  80% {
+    border-radius: 46% 36% 45% 64%/78% 67% 29% 23%;
+  }
+  100% {
+    border-radius: 21% 39% 39% 50%/37% 48% 52% 36%;
+  }
+}/*# sourceMappingURL=aboutme.css.map */
