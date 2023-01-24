@@ -89,6 +89,9 @@ h1 {
   border: 1px solid black;
   background-color: white;
 }
+.main_container.light .portfolio_container {
+  background-color: var(--light);
+}
 .main_container.light nav a,
 .main_container.light nav {
   color: var(--dark);
