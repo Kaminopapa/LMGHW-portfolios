@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap);
 @import url(/public/fonts/stylesheet.css);
+
 :root {
   --dark: #060606;
   --light: #ffffff;
@@ -8,6 +9,7 @@
     #489250 0%,
     rgba(11, 17, 6, 0.24) 100%
   );
+
   --bigShadow: radial-gradient(
     50% 50% at 50% 49.91%,
     #489250 0%,
@@ -26,7 +28,6 @@
   --color-primary-variant: rgba(114, 233, 156, 0.4);
   --handle-color: rgba(139, 62, 62, 0.89);
 }
-
 * {
   padding: 0;
   margin: 0;
@@ -50,17 +51,14 @@ h1,
 h2 {
   font-family: "dune_riseregular";
 }
-
 h3 {
   color: var(--h3Color);
   font-weight: 500;
 }
-
 h1 {
   color: #fff;
   font-weight: bold;
 }
-
 .main_container {
   position: relative;
   width: 100vw;
@@ -69,64 +67,52 @@ h1 {
   background-color: var(--dark);
   transition: background 0.6s;
 }
-
 .main_container.light {
   background-color: var(--light);
+
   transition-delay: 0.6s;
 }
-
 .main_container.light h1 {
   color: var(--dark);
 }
-
 .main_container.light .border {
   border-color: var(--dark);
 }
-
 .main_container.light .border,
 .main_container.light .border .container {
   background-color: var(--light);
 }
-
 /* shadows */
 .main_container.light .icon_bg {
   background: var(--bigShadowLight);
 }
-
 /* skill active */
 .main_container.light .icon_bg .icon_box.active {
   border-color: black;
 }
-
 /* skill logo active */
 .main_container.light .icon_bg .icon_box.active .logo {
   border: 1px solid black;
 }
-
 /* skill logo box */
 .main_container.light .icon_bg .icon_box {
   border: 1px solid black;
   background-color: white;
 }
-
 .main_container.light .portfolio_container {
   background-color: var(--light);
 }
-
 .main_container.light .portfolio_container .indicators div {
   border: 1px solid var(--dark);
 }
-
 .main_container.light .portfolio_container .indicators .prev,
 .main_container.light .portfolio_container .indicators .next {
   color: var(--dark);
 }
-
 .main_container.light nav a,
 .main_container.light nav {
   color: var(--dark);
 }
-
 .container {
   width: 100%;
   height: 100%;
@@ -153,8 +139,9 @@ h1 {
     justify-content: center;
     align-items: center;
   }
+
   .main_container.light nav,
-.main_container.light nav a.active {
+  .main_container.light nav a.active {
     border-color: var(--light);
   }
   .border {
@@ -174,4 +161,4 @@ h1 {
     height: 89%;
     top: auto;
   }
-}/*# sourceMappingURL=App.css.map */
+}
