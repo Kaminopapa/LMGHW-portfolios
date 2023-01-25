@@ -2,12 +2,13 @@
 
 @font-face {
   font-family: "dune_riseregular";
-  src: url("http://127.0.0.1:5173/src/fonts/dune_rise-webfont.woff2")
+  src: url("https://lmghw-portfolios.vercel.app/src/fonts/dune_rise-webfont.woff2")
       format("woff2"),
-    url("http://127.0.0.1:5173/src/fonts/dune_rise-webfont.woff") format("woff"),
-    url("http://127.0.0.1:5173/src/fonts/dune_rise-webfont.ttf")
+    url("https://lmghw-portfolios.vercel.app/src/fonts/dune_rise-webfont.woff")
+      format("woff"),
+    url("https://lmghw-portfolios.vercel.app/src/fonts/dune_rise-webfont.ttf")
       format("truetype"),
-    url("http://127.0.0.1:5173/src/fonts/dune_rise-webfont.svg#dune_riseregular")
+    url("https://lmghw-portfolios.vercel.app/src/fonts/dune_rise-webfont.svg#dune_riseregular")
       format("svg");
   font-weight: normal;
   font-style: normal;
@@ -15,12 +16,13 @@
 
 @font-face {
   font-family: "dune_riseregular";
-  src: url("http://127.0.0.1:5173/src/fonts/dune_rise-webfont.woff2")
+  src: url("https://lmghw-portfolios.vercel.app/src/fonts/dune_rise-webfont.woff2")
       format("woff2"),
-    url("http://127.0.0.1:5173/src/fonts/dune_rise-webfont.woff") format("woff"),
-    url("http://127.0.0.1:5173/src/fonts/dune_rise-webfont.ttf")
+    url("https://lmghw-portfolios.vercel.app/src/fonts/dune_rise-webfont.woff")
+      format("woff"),
+    url("https://lmghw-portfolios.vercel.app/src/fonts/dune_rise-webfont.ttf")
       format("truetype"),
-    url("http://127.0.0.1:5173/src/fonts/dune_rise-webfont.svg#dune_riseregular")
+    url("https://lmghw-portfolios.vercel.app/src/fonts/dune_rise-webfont.svg#dune_riseregular")
       format("svg");
   font-weight: normal;
   font-style: normal;
