@@ -1,25 +1,67 @@
 .about_me_container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
-
+  overflow-x: scroll;
   .me_content {
     width: 100%;
     height: 100%;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin-top: 6rem;
+    gap: 1em;
     img {
-      width: 400px;
-      height: 400px;
-
+      width: 260px;
+      height: 260px;
       object-fit: cover;
       transform: rotateY(180deg);
-      animation: anim 30s linear infinite;
+      animation: anim 20s linear infinite;
+    }
+    .intro {
+      width: 90%;
+      color: var(--light);
+      text-align: center;
+      .about_cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5em;
+        .about_card {
+          background: var(--color-primary-variant);
+          border: 1px solid transparent;
+          border-radius: 1rem;
+          padding: 1.5rem;
+          text-align: center;
+          transition: transition 4s;
+          .about_icon {
+            color: var(--color-primary);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+          }
+          h5 {
+            font-size: 0.9rem;
+          }
+          small {
+            color: var(--color-light);
+            font-size: 0.7rem;
+          }
+        }
+      }
+      p {
+        margin: 1rem 0;
+      }
+      a {
+        text-decoration: none;
+        border: 1px solid var(--color-primary);
+        background-color: var(--color-primary);
+        border-radius: 0.4rem;
+        cursor: pointer;
+        padding: 0.75rem 1.2rem;
+        width: max-content;
+        color: white;
+        transition: 0.6s ease;
+        &:hover {
+          background-color: var(--light);
+          color: black;
+        }
+      }
     }
   }
 }
@@ -41,5 +83,41 @@
   }
   100% {
     border-radius: 21% 39% 39% 50% / 37% 48% 52% 36%;
+  }
+}
+@media (min-width: 1800px) {
+  .about_me_container {
+    overflow: hidden;
+    .me_content {
+      grid-template-columns: 1fr 1fr;
+      img {
+        width: 500px;
+        height: 500px;
+      }
+      .intro {
+        width: 100%;
+        text-align: left;
+        .about_cards {
+          gap: 3rem;
+          .about_card {
+            .about_icon {
+              color: var(--color-primary);
+              font-size: 2rem;
+              margin-bottom: 1rem;
+            }
+            h5 {
+              font-size: 1rem;
+            }
+            small {
+              font-size: 0.8rem;
+            }
+          }
+        }
+        p {
+          margin: 1.5rem 0;
+          font-size: 1.2rem;
+        }
+      }
+    }
   }
 }

@@ -4,7 +4,7 @@ interface initial {
 }
 
 const initialState: initial = {
-  tab: "portfolio",
+  tab: "about_me",
 };
 
 const navSlice = createSlice({
