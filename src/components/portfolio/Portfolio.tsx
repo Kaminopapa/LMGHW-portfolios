@@ -48,7 +48,7 @@ const Portfolio = ({ children }: any) => {
 
   return (
     <div className="portfolio_container">
-      <Header subTitle="wanna see my works?" mainTitle="Portfolio" />
+      <Header subTitle="My Recent Works" mainTitle="Portfolios" />
       <div
         {...handleSwipe}
         className="cards_container"

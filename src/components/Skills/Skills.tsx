@@ -150,10 +150,7 @@ const Skills = () => {
   });
   return (
     <div className="bg ">
-      <Header
-        subTitle="what skills i have"
-        mainTitle="That's all but not all"
-      />
+      <Header subTitle="What Skills I Have" mainTitle="My Experiences" />
       <div className="iconContainer">
         <div className="icon_bg">
           <div className="icon">

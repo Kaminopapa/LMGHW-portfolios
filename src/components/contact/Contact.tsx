@@ -5,7 +5,7 @@ const Contact = () => {
       className="contact_container"
       style={{ width: "100%", height: "100%" }}
     >
-      <Header subTitle="wanna have a chart with me ?" mainTitle="Contact Me" />
+      <Header subTitle="Get In Touch" mainTitle="Contact Me" />
     </div>
   );
 };

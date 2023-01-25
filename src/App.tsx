@@ -25,7 +25,7 @@ function App() {
         <div className="border">
           <NavigationBar />
           <div className={currentTabs === "Home" ? "container" : "bye"}>
-            <h1>Home</h1>
+            <h1>HOME</h1>
           </div>
           <div className={currentTabs === "about_me" ? "container" : "bye"}>
             <AboutMe />
