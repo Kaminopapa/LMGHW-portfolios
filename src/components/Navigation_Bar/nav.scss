@@ -8,10 +8,31 @@ nav {
   bottom: 0.5rem;
   display: flex;
   gap: 0.8rem;
-
   border-radius: 3rem;
   border: 1px solid var(--color-primary);
   backdrop-filter: blur(15px);
+  // animation: showNHide 1s linear;
+  // animation-fill-mode: forwards;
+}
+.showNav {
+  animation-name: displayNav 1s linear;
+}
+
+@keyframes showNHide {
+  0% {
+    bottom: 0.5rem;
+  }
+  100% {
+    bottom: -10%;
+  }
+}
+@keyframes displayNav {
+  0% {
+    bottom: -10%;
+  }
+  100% {
+    bottom: 0.5rem;
+  }
 }
 nav a {
   background: transparent;

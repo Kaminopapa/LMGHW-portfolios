@@ -8,6 +8,7 @@ const AboutMe = () => {
 
       <div className="me_content">
         <img src="/aboutmerec.jpg" alt="" />
+
         <div className="intro">
           <div className="about_cards">
             <div className="about_card">

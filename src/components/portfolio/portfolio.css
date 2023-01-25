@@ -5,6 +5,7 @@
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .portfolio_container .cards_container {
   width: 300px;

@@ -16,6 +16,44 @@ nav {
           backdrop-filter: blur(15px);
 }
 
+.showNav {
+  -webkit-animation-name: displayNav 1s linear;
+          animation-name: displayNav 1s linear;
+}
+
+@-webkit-keyframes showNHide {
+  0% {
+    bottom: 0.5rem;
+  }
+  100% {
+    bottom: -10%;
+  }
+}
+
+@keyframes showNHide {
+  0% {
+    bottom: 0.5rem;
+  }
+  100% {
+    bottom: -10%;
+  }
+}
+@-webkit-keyframes displayNav {
+  0% {
+    bottom: -10%;
+  }
+  100% {
+    bottom: 0.5rem;
+  }
+}
+@keyframes displayNav {
+  0% {
+    bottom: -10%;
+  }
+  100% {
+    bottom: 0.5rem;
+  }
+}
 nav a {
   background: transparent;
   padding: 0.9rem;
