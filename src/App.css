@@ -1,19 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap);
-@font-face {
-  font-family: "CustomFont";
-  /* local testing */
-  /* src: url("http://127.0.0.1:5173/src/font/dune_rise-webfont.ttf") format("ttf");
-  src: url("http://127.0.0.1:5173/src/font/dune_rise-webfont.woff")
-    format("woff");
-  src: url("http://127.0.0.1:5173/src/font/dune_rise-webfont.woff2")
-    format("woff2"); */
-  src: url("https://lmghw.vercel.app/src/font/dune_rise-webfont.ttf")
-    format("ttf");
-  src: url("https://lmghw.vercel.app/src/font/dune_rise-webfont.woff")
-    format("woff");
-  src: url("https://lmghw.vercel.app/src/font/dune_rise-webfont.woff2")
-    format("woff2");
-}
+
+@import url(/src/fonts/stylesheet.css);
 :root {
   --dark: #060606;
   --light: #ffffff;
@@ -61,7 +48,7 @@ body {
 }
 h1,
 h2 {
-  font-family: "CustomFont";
+  font-family: "dune_riseregular";
 }
 h3 {
   color: var(--h3Color);
