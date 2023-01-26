@@ -11,29 +11,62 @@ nav {
   border-radius: 3rem;
   border: 1px solid var(--color-primary);
   backdrop-filter: blur(15px);
-  // animation: showNHide 1s linear;
-  // animation-fill-mode: forwards;
-}
-.showNav {
-  animation-name: displayNav 1s linear;
+  animation: showNHide 1s linear;
+  animation-fill-mode: forwards;
+
+  &::after {
+    display: block;
+    content: "";
+    width: 0;
+    height: 10px;
+    left: 50%;
+    top: -1.5rem;
+    position: absolute;
+    border-radius: 1rem;
+    background-color: rgba(31, 228, 74, 0.418);
+    transition: height 0.6s;
+    animation: expandMobile 1s ease 1;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+  &:hover {
+    animation: reverse;
+
+    &::after {
+      animation: collapsedMobile 1s ease 1;
+    }
+  }
 }
 
+@keyframes expandMobile {
+  0% {
+    width: 0%;
+  }
+  100% {
+    left: 0;
+    width: 100%;
+  }
+}
+
+@keyframes collapsedMobile {
+  0% {
+    left: 0;
+    width: 100%;
+  }
+  100% {
+    left: 50%;
+    width: 0%;
+  }
+}
 @keyframes showNHide {
   0% {
     bottom: 0.5rem;
   }
   100% {
-    bottom: -10%;
+    bottom: -7.5%;
   }
 }
-@keyframes displayNav {
-  0% {
-    bottom: -10%;
-  }
-  100% {
-    bottom: 0.5rem;
-  }
-}
+
 nav a {
   background: transparent;
   padding: 0.9rem;
@@ -63,43 +96,43 @@ nav a.active {
     align-items: center;
     transform: none;
     height: 50%;
-    /* border-radius: 100% 0% 100% 0% / 0% 70% 10% 100%; */
+
     border-radius: 0 1rem 1rem 0;
     background-color: var(--color-primary-variant);
     transition: 0.3s;
     transition-delay: 0.2s;
-    /* overflow: hidden; */
-  }
-  nav::before {
-    content: "";
-    display: block;
-    width: 50px;
-    height: 50px;
-    background-repeat: no-repeat;
-    background-image: url(/logo.svg);
-  }
-  nav::after {
-    display: block;
-    content: "";
-    width: 5px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: -70%;
-    border-radius: 1rem;
-    background-color: rgba(31, 228, 74, 0.418);
-    transition: height 0.6s;
-    animation: expand 0.6s linear 1;
-  }
-  nav:hover {
-    left: 0;
-    transition: left 0.03s;
-  }
-  nav:hover::after {
-    animation-name: none;
-    top: 50%;
-    height: 0;
-    transition: 0.6s;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 50px;
+      background-repeat: no-repeat;
+      background-image: url(/logo.svg);
+    }
+    &::after {
+      display: block;
+      content: "";
+      width: 5px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 8rem;
+      border-radius: 1rem;
+      background-color: rgba(31, 228, 74, 0.418);
+      transition: height 0.6s;
+      animation: expandLargeDevices 0.6s linear 1;
+    }
+    &:hover {
+      left: 0;
+      transition: left 0.03s;
+    }
+    &:hover::after {
+      animation-name: none;
+      top: 50%;
+      height: 0;
+      transition: 0.6s;
+    }
   }
   @keyframes showBar {
     0% {
@@ -109,7 +142,7 @@ nav a.active {
       left: 0;
     }
   }
-  @keyframes expand {
+  @keyframes expandLargeDevices {
     0% {
       top: 50%;
       height: 20%;
@@ -131,12 +164,5 @@ nav a.active {
     border-radius: 50%;
     border: 4px solid var(--dark);
     transform: translateX(35px) rotate(1turn);
-  }
-}
-
-/* for mac? */
-@media (min-width: 2000px) {
-  nav::after {
-    right: -150%;
   }
 }
