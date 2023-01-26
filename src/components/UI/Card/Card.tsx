@@ -51,7 +51,7 @@ const Card = ({ image, demo, github, title, description }: cardProps) => {
               Github
             </a>
           )}
-          <a href={demo} className="btn primary" target="_blank">
+          <a href={demo} className="btn btn_primary" target="_blank">
             Demo
           </a>
         </div>

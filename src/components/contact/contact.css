@@ -1,0 +1,54 @@
+.contact_container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.contact_container .form_area {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact_container .form_area form {
+  width: 85%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: grid;
+  color: white;
+  background: rgba(255, 248, 248, 0.01);
+  border: 2px solid rgba(255, 255, 255, 0.19);
+  box-shadow: 5px 10px 20px #5f8459;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 5px;
+  padding: 1rem;
+}
+.contact_container .form_area form input[type=text],
+.contact_container .form_area form input[type=email],
+.contact_container .form_area form textarea {
+  margin-top: 1rem;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #fafafa;
+  color: white;
+  padding: 0.5rem;
+}
+.contact_container .form_area form textarea {
+  height: 15rem;
+}
+.contact_container .form_area form textarea:focus,
+.contact_container .form_area form input:focus {
+  outline: none;
+}
+.contact_container .form_area form input[type=submit] {
+  width: 20%;
+  margin: 1rem 0.5rem;
+  padding: 0.5em 1em;
+}
+.contact_container .form_area .carton_area {
+  display: none;
+}/*# sourceMappingURL=contact.css.map */

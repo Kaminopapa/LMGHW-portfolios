@@ -1,7 +1,16 @@
 import Header from "../UI/Header/Header";
 import "./aboutme.css";
-import { BiAddToQueue } from "react-icons/bi";
+import { FaAward } from "react-icons/fa";
+import { BiCodeCurly } from "react-icons/bi";
+import { VscFolderLibrary } from "react-icons/vsc";
+import { useAppDispatch } from "../../store";
+import { selectTab } from "../../store/navSlice";
 const AboutMe = () => {
+  const dispatch = useAppDispatch();
+
+  const toContact = () => {
+    dispatch(selectTab("contact"));
+  };
   return (
     <div className="about_me_container">
       <Header subTitle="Get To Know" mainTitle="Me" />
@@ -12,17 +21,17 @@ const AboutMe = () => {
         <div className="intro">
           <div className="about_cards">
             <div className="about_card">
-              <BiAddToQueue className="about_icon" />
+              <FaAward className="about_icon" />
               <h5>Langara College</h5>
               <small>Computer Studies</small>
             </div>
             <div className="about_card">
-              <BiAddToQueue className="about_icon" />
+              <BiCodeCurly className="about_icon" />
               <h5>Coding Experiences</h5>
               <small>2+years</small>
             </div>
             <div className="about_card">
-              <BiAddToQueue className="about_icon" />
+              <VscFolderLibrary className="about_icon" />
               <h5>Projects</h5>
               <small>20+ projects</small>
             </div>
@@ -35,7 +44,9 @@ const AboutMe = () => {
             a chance to show to everyone -&gt; Encode them into the real world !
             This is what I have always wanted to do and what I am doing.
           </p>
-          <a href="Let's Talk">Let's Talk</a>
+          <a className="btn btn_primary" onClick={toContact}>
+            Let's Talk
+          </a>
         </div>
       </div>
     </div>

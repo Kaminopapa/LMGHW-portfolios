@@ -57,63 +57,58 @@
 .about_me_container .me_content .intro p {
   margin: 1rem 0;
 }
-.about_me_container .me_content .intro a {
-  text-decoration: none;
-  border: 1px solid var(--color-primary);
-  background-color: var(--color-primary);
-  border-radius: 0.4rem;
-  cursor: pointer;
-  padding: 0.75rem 1.2rem;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  color: white;
-  transition: 0.6s ease;
-}
-.about_me_container .me_content .intro a:hover {
-  background-color: var(--light);
-  color: black;
-}
 
 @-webkit-keyframes anim {
   0% {
     border-radius: 21% 39% 39% 50%/37% 48% 52% 36%;
+    box-shadow: 10px 5px 5px var(--color-primary-variant);
   }
   20% {
     border-radius: 46% 36% 45% 64%/78% 67% 29% 23%;
+    box-shadow: 0px 20px 5px var(--color-primary-variant);
   }
   40% {
     border-radius: 57% 39% 39% 50%/69% 48% 52% 16%;
+    box-shadow: -5px 30px 5px var(--color-primary-variant);
   }
   60% {
     border-radius: 57% 39% 39% 50%/69% 48% 52% 16%;
+    box-shadow: -5px -20px 5px var(--color-primary-variant);
   }
   80% {
     border-radius: 46% 36% 45% 64%/78% 67% 29% 23%;
+    box-shadow: -5px 20px 5px var(--color-primary-variant);
   }
   100% {
     border-radius: 21% 39% 39% 50%/37% 48% 52% 36%;
+    box-shadow: 10px 5px 5px var(--color-primary-variant);
   }
 }
 
 @keyframes anim {
   0% {
     border-radius: 21% 39% 39% 50%/37% 48% 52% 36%;
+    box-shadow: 10px 5px 5px var(--color-primary-variant);
   }
   20% {
     border-radius: 46% 36% 45% 64%/78% 67% 29% 23%;
+    box-shadow: 0px 20px 5px var(--color-primary-variant);
   }
   40% {
     border-radius: 57% 39% 39% 50%/69% 48% 52% 16%;
+    box-shadow: -5px 30px 5px var(--color-primary-variant);
   }
   60% {
     border-radius: 57% 39% 39% 50%/69% 48% 52% 16%;
+    box-shadow: -5px -20px 5px var(--color-primary-variant);
   }
   80% {
     border-radius: 46% 36% 45% 64%/78% 67% 29% 23%;
+    box-shadow: -5px 20px 5px var(--color-primary-variant);
   }
   100% {
     border-radius: 21% 39% 39% 50%/37% 48% 52% 36%;
+    box-shadow: 10px 5px 5px var(--color-primary-variant);
   }
 }
 @media (min-width: 1800px) {
@@ -122,6 +117,7 @@
   }
   .about_me_container .me_content {
     grid-template-columns: 1fr 1fr;
+    align-items: center;
   }
   .about_me_container .me_content img {
     width: 500px;

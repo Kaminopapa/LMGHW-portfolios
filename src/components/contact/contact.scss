@@ -1,0 +1,53 @@
+.contact_container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  .form_area {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    form {
+      width: 85%;
+      height: max-content;
+      display: grid;
+      color: white;
+      background: rgba(255, 248, 248, 0.01);
+      border: 2px solid rgba(255, 255, 255, 0.19);
+      box-shadow: 5px 10px 20px #5f8459;
+      backdrop-filter: blur(10px);
+      /* Note: backdrop-filter has minimal browser support */
+
+      border-radius: 5px;
+      padding: 1rem;
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        margin-top: 1rem;
+        border: none;
+        background: transparent;
+        border-bottom: 1px solid #fafafa;
+        color: white;
+        padding: 0.5rem;
+      }
+      textarea {
+        height: 15rem;
+      }
+      textarea:focus,
+      input:focus {
+        outline: none;
+      }
+      input[type="submit"] {
+        width: 20%;
+        margin: 1rem 0.5rem;
+        padding: 0.5em 1em;
+      }
+    }
+    .carton_area {
+      display: none;
+    }
+  }
+}
