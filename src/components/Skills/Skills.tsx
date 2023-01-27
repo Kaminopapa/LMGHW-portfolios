@@ -137,7 +137,7 @@ const Skills = () => {
             <ul className="sci">
               {item.links.map((link) => (
                 <li key={crypto.randomUUID()}>
-                  <a href={link.url} target="_blank">
+                  <a href={link.url} target="_blank" rel="noreferrer">
                     <MdOutlineVisibility />
                   </a>
                 </li>

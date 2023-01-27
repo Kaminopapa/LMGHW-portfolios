@@ -47,11 +47,16 @@ const Card = ({ image, demo, github, title, description }: cardProps) => {
 
         <div className="link_group">
           {github && (
-            <a href={github} className="btn" target="_blank">
+            <a href={github} className="btn" target="_blank" rel="noreferrer">
               Github
             </a>
           )}
-          <a href={demo} className="btn btn_primary" target="_blank">
+          <a
+            href={demo}
+            className="btn btn_primary"
+            target="_blank"
+            rel="noreferrer"
+          >
             Demo
           </a>
         </div>

@@ -106,6 +106,7 @@ h1 {
   color: var(--color-primary);
 
   font-weight: 700;
+  cursor: pointer;
   &.btn_primary {
     background-color: var(--color-primary);
     color: black;
@@ -176,8 +177,11 @@ h1 {
             .about_cards {
               .about_card {
                 background: var(--color-primary);
+                h5 {
+                  color: var(--light);
+                }
                 .about_icon {
-                  color: var(--color-primary-variant);
+                  color: var(--color-light);
                 }
               }
             }
@@ -190,6 +194,59 @@ h1 {
           }
         }
       }
+      .contact_container {
+        .form_area {
+          form {
+            box-shadow: 15px 15px 15px gray;
+            background: rgba(255, 248, 248, 0.6);
+            border-color: rgba(36, 34, 34, 0.466);
+            input,
+            textarea {
+              color: var(--dark);
+              border-color: var(--dark);
+            }
+            input[type="submit"] {
+              background-color: white;
+
+              &:hover {
+                color: var(--color-primary);
+              }
+            }
+          }
+          .other_contact {
+            background: linear-gradient(
+                0deg,
+                rgba(16, 18, 16, 0.2),
+                rgba(16, 18, 16, 0.2)
+              ),
+              radial-gradient(
+                  79.45% 171.99% at 5.36% -11.87%,
+                  #ffffff 0%,
+                  rgba(255, 255, 255, 0) 100%
+                )
+                /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+              linear-gradient(
+                81.81deg,
+                #576265 6.54%,
+                #9ea1a1 26.25%,
+                #848b8a 42.42%,
+                #576265 56.96%,
+                #757a7b 74.27%,
+                #9ea1a1 85.31%,
+                #576265 101%,
+                #576265 101.01%
+              );
+            background-blend-mode: normal, overlay, normal;
+            box-shadow: inset 0px -3px 1.5px rgba(0, 0, 0, 0.5),
+              inset 0px 3px 1.5px rgba(255, 255, 255, 0.4);
+
+            .carton_area {
+              box-shadow: 15px 15px 15px gray;
+              border-color: rgba(36, 34, 34, 0.466);
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -197,6 +254,10 @@ h1 {
 .main_container.light nav a,
 .main_container.light nav {
   color: var(--dark);
+  border-color: var(--dark);
+  &::after {
+    background-color: var(--dark);
+  }
 }
 
 @media (min-width: 768px) {
@@ -206,9 +267,43 @@ h1 {
     align-items: center;
   }
 
-  .main_container.light nav,
-  .main_container.light nav a.active {
-    border-color: var(--light);
+  .main_container.light nav {
+    background-color: var(--dark);
+    a {
+      color: var(--light);
+      &.active {
+        background-color: var(--dark);
+        border-color: var(--light);
+      }
+    }
+  }
+
+  .main_container.light .contact_container .other_contact {
+    background: linear-gradient(
+        0deg,
+        rgba(16, 18, 16, 0.2),
+        rgba(16, 18, 16, 0.2)
+      ),
+      radial-gradient(
+          79.45% 171.99% at 5.36% -11.87%,
+          #ffffff 0%,
+          rgba(255, 255, 255, 0) 100%
+        )
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+      linear-gradient(
+        81.81deg,
+        #576265 6.54%,
+        #9ea1a1 26.25%,
+        #848b8a 42.42%,
+        #576265 56.96%,
+        #757a7b 74.27%,
+        #9ea1a1 85.31%,
+        #576265 101%,
+        #576265 101.01%
+      );
+    background-blend-mode: normal, overlay, normal;
+    box-shadow: inset 0px -3px 1.5px rgba(0, 0, 0, 0.5),
+      inset 0px 3px 1.5px rgba(255, 255, 255, 0.4);
   }
   .border {
     width: var(--desktopSize);

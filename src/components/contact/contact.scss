@@ -3,12 +3,16 @@
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
+  position: relative;
+
   .form_area {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-flow: column-reverse;
+
     form {
       width: 85%;
       height: max-content;
@@ -29,12 +33,13 @@
         margin-top: 1rem;
         border: none;
         background: transparent;
-        border-bottom: 1px solid #fafafa;
+        border-bottom: 1px solid #fafafa88;
         color: white;
         padding: 0.5rem;
       }
       textarea {
         height: 15rem;
+        resize: none;
       }
       textarea:focus,
       input:focus {
@@ -44,10 +49,169 @@
         width: 20%;
         margin: 1rem 0.5rem;
         padding: 0.5em 1em;
+        cursor: pointer;
       }
     }
-    .carton_area {
-      display: none;
+    .other_contact {
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+      .business_card {
+        display: none;
+      }
+      .carton_area {
+        width: 85%;
+        height: max-content;
+        color: white;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        position: absolute;
+        bottom: 3rem;
+        background: rgba(255, 248, 248, 0.01);
+        border: 2px solid rgba(255, 255, 255, 0.19);
+        box-shadow: 5px 10px 20px #5f8459;
+        backdrop-filter: blur(10px);
+        a {
+          display: flex;
+
+          .mail {
+            margin: 0;
+          }
+        }
+        .mail {
+          font-size: 3rem;
+          color: var(--color-primary);
+          margin: 1rem 0;
+          cursor: pointer;
+        }
+        .sent {
+          animation: goAway 5s ease 1;
+          animation-fill-mode: forwards;
+        }
+      }
     }
+  }
+}
+.weChatQR {
+  width: 90%;
+  height: 50%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 1800px) {
+  .contact_container {
+    background: url(/logo.svg) no-repeat;
+    background-position: 50% 5rem;
+    .form_area {
+      flex-flow: row;
+      column-gap: 10%;
+      form {
+        width: 50%;
+
+        input[type="submit"] {
+          width: max-content;
+          font-size: 1rem;
+        }
+      }
+      .other_contact {
+        width: 40%;
+        height: 30%;
+        flex-flow: column;
+        align-items: flex-start;
+        display: flex;
+
+        background: linear-gradient(
+            0deg,
+            rgba(15, 84, 22, 0.4),
+            rgba(15, 84, 22, 0.4)
+          ),
+          radial-gradient(
+              79.45% 171.99% at 5.36% -11.87%,
+              #ffffff 0%,
+              rgba(255, 255, 255, 0) 100%
+            )
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+          linear-gradient(
+            81.81deg,
+            #576265 6.54%,
+            #9ea1a1 26.25%,
+            #848b8a 42.42%,
+            #576265 56.96%,
+            #757a7b 74.27%,
+            #9ea1a1 85.31%,
+            #576265 101%,
+            #576265 101.01%
+          );
+        background-blend-mode: normal, overlay, normal;
+        box-shadow: inset 0px -3px 1.5px rgba(0, 0, 0, 0.5),
+          inset 0px 3px 1.5px rgba(255, 255, 255, 0.4);
+        border-radius: 20px 20px 0px 0px;
+        position: relative;
+        box-shadow: 5px 10px 20px #5f8459;
+
+        transition: transform 0.6s;
+        &:hover {
+          transform: scale(1.1);
+        }
+        .business_card {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          flex-flow: column;
+          margin-left: 1rem;
+          font-size: 1.5rem;
+          h1 {
+            color: var(--dark);
+            font-size: larger;
+          }
+          h3 {
+            color: var(--dark);
+            font-weight: bolder;
+          }
+
+          p a {
+            text-decoration: none;
+            color: var(--dark);
+          }
+        }
+        .carton_area {
+          width: 100%;
+          position: absolute;
+          bottom: -5rem;
+
+          .mail {
+            filter: grayscale(1);
+
+            &:hover {
+              filter: grayscale(0);
+            }
+          }
+          .mail.sent {
+            animation: none;
+            animation: goAway 5s ease 1;
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes goAway {
+  0% {
+    transform: translateY(-1rem);
+  }
+  50% {
+    transform: translateY(1rem);
+  }
+  100% {
+    transform: translateY(-1000rem);
+
+    display: none;
   }
 }

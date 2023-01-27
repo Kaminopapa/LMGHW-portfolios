@@ -28,7 +28,7 @@ const AboutMe = () => {
             <div className="about_card">
               <BiCodeCurly className="about_icon" />
               <h5>Coding Experiences</h5>
-              <small>2+years</small>
+              <small>4+years</small>
             </div>
             <div className="about_card">
               <VscFolderLibrary className="about_icon" />
