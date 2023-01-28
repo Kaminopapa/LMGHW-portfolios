@@ -36,7 +36,7 @@ const useForm = <T extends Record<keyof T, any> = {}>(options?: {
       });
     };
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const validations = options?.validations;
     if (validations) {
@@ -67,7 +67,7 @@ const useForm = <T extends Record<keyof T, any> = {}>(options?: {
     }
     setErrors({});
     if (options?.onSubmit) {
-      await emailjs
+      emailjs
         .send(
           `${import.meta.env.VITE_EMAILJS_SERVICE_KEY}`,
           `${import.meta.env.VITE_EMAILJS_TEMPLATE_KEY}`,

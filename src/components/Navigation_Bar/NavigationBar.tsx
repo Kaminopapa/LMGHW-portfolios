@@ -20,7 +20,6 @@ const NavigationBar = () => {
     dispatch(selectTab(name));
   };
   const handleDisplay = () => {
-    console.log(show);
     setShow(!show);
   };
 

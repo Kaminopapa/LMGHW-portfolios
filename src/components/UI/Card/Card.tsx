@@ -9,7 +9,7 @@ interface cardProps {
 }
 const Card = ({ image, demo, github, title, description }: cardProps) => {
   const [show, setShow] = useState(false); //mobile rotate
-  console.log(show);
+
   return (
     <div
       className="card_content"

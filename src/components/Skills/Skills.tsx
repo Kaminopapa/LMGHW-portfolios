@@ -15,7 +15,6 @@ const Skills = () => {
   const handleActive = (id: number) => {
     const activeElement = icons.find((item) => item.id === id);
     activeElement && setActive(id);
-    console.log(active);
   };
   const icons = [
     {

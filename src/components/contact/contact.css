@@ -160,7 +160,9 @@
     justify-content: center;
     align-items: flex-start;
     flex-flow: column;
-    margin-left: 1rem;
+    margin: 1rem 2.6rem;
+    padding-top: 1rem;
+    line-height: 2.2rem;
     font-size: 1.5rem;
   }
   .contact_container .form_area .other_contact .business_card h1 {
