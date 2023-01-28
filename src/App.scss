@@ -21,7 +21,7 @@
     rgba(6, 6, 6, 0) 100%
   );
   --i: 0;
-  --color-light: rgb(119, 114, 114);
+  --color-dark-light: rgb(119, 114, 114);
   --desktopSize: 90%;
   --color-light: rgba(255, 255, 255, 0.6);
   --color-primary: #489250;
@@ -98,6 +98,7 @@ h1 {
   position: absolute;
   top: 0;
 }
+
 .btn {
   text-decoration: none;
   padding: 0.75rem 1.2rem;
@@ -137,6 +138,17 @@ h1 {
     background-color: var(--light);
     .container {
       background-color: var(--light);
+      .home_container {
+        .intro_animation {
+          .saperate {
+            span {
+              opacity: 1;
+              color: black;
+              animation-fill-mode: backwards;
+            }
+          }
+        }
+      }
       //! skills
       .bg {
         .iconContainer {
@@ -189,6 +201,19 @@ h1 {
               color: var(--light);
               &:hover {
                 color: var(--color-primary);
+              }
+            }
+          }
+          .doing_list {
+            color: var(--dark);
+            .todos {
+              .todo {
+                h3 {
+                  color: var(--dark);
+                }
+                p {
+                  color: var(--color-dark-light);
+                }
               }
             }
           }

@@ -1,0 +1,210 @@
+.intro_animation {
+  position: relative;
+}
+.intro_animation .saperate span {
+  transition: all 1s linear;
+  font-size: 3rem;
+  opacity: 0;
+  -webkit-animation: showUp 3s linear;
+          animation: showUp 3s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+.intro_animation .hello::before {
+  display: block;
+  position: absolute;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  content: "Hello";
+  margin: 0 auto;
+  top: 20%;
+  left: 20%;
+  -webkit-animation: Hello 5s ease-in;
+          animation: Hello 5s ease-in;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@media (min-width: 1080px) {
+  .intro_animation .saperate {
+    cursor: pointer;
+  }
+  .intro_animation .saperate:hover span {
+    color: white;
+    text-shadow: 0 0 10px hsl(0deg, 0%, 100%), 0 0 20px hsl(0deg, 0%, 100%), 0 0 40px hsl(0deg, 0%, 100%);
+    /* letter Luis */
+    /* letter Mi */
+    /* letter Guel */
+  }
+  .intro_animation .saperate:hover span:nth-child(1) {
+    margin-right: 2px;
+  }
+  .intro_animation .saperate:hover span:nth-child(1):after {
+    content: "uis";
+  }
+  .intro_animation .saperate:hover span:nth-child(2) {
+    margin-left: 10px;
+  }
+  .intro_animation .saperate:hover span:nth-child(2):after {
+    content: "i";
+  }
+  .intro_animation .saperate:hover span:nth-child(3) {
+    text-transform: lowercase;
+  }
+  .intro_animation .saperate:hover span:nth-child(3):after {
+    content: "uel";
+  }
+  .intro_animation .saperate:hover span:nth-child(4) {
+    margin-left: 10px;
+  }
+  .intro_animation .saperate:hover span:nth-child(4):after {
+    content: "ung";
+  }
+  .intro_animation .saperate:hover span:nth-child(5) {
+    margin-left: 10px;
+  }
+  .intro_animation .saperate:hover span:nth-child(5):after {
+    content: "u";
+  }
+}
+@-webkit-keyframes Hello {
+  0% {
+    color: transparent;
+  }
+  10% {
+    color: rgba(255, 255, 255, 0.041);
+  }
+  20% {
+    color: white;
+  }
+  40% {
+    color: transparent;
+  }
+  60% {
+    content: "I am";
+    color: rgba(255, 255, 255, 0.041);
+  }
+  70% {
+    content: "I am";
+    color: white;
+  }
+  80% {
+    content: "I am";
+    color: rgba(255, 255, 255, 0.041);
+  }
+  90% {
+    color: transparent;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    content: "";
+    display: none;
+  }
+}
+@keyframes Hello {
+  0% {
+    color: transparent;
+  }
+  10% {
+    color: rgba(255, 255, 255, 0.041);
+  }
+  20% {
+    color: white;
+  }
+  40% {
+    color: transparent;
+  }
+  60% {
+    content: "I am";
+    color: rgba(255, 255, 255, 0.041);
+  }
+  70% {
+    content: "I am";
+    color: white;
+  }
+  80% {
+    content: "I am";
+    color: rgba(255, 255, 255, 0.041);
+  }
+  90% {
+    color: transparent;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    content: "";
+    display: none;
+  }
+}
+@-webkit-keyframes showUp {
+  0% {
+    opacity: 1;
+    color: transparent;
+  }
+  15% {
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.041);
+  }
+  30% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+    text-shadow: 0 0 10px hsl(0deg, 0%, 100%);
+  }
+  60% {
+    opacity: 1;
+    text-shadow: 0 0 40px hsl(0deg, 0%, 100%);
+  }
+  75% {
+    opacity: 1;
+    text-shadow: 0 0 10px hsl(0deg, 0%, 100%);
+  }
+  90% {
+    opacity: 1;
+    text-shadow: 0 0 5px hsl(0deg, 0%, 100%);
+  }
+  100% {
+    opacity: 1;
+    color: white;
+  }
+}
+@keyframes showUp {
+  0% {
+    opacity: 1;
+    color: transparent;
+  }
+  15% {
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.041);
+  }
+  30% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+    text-shadow: 0 0 10px hsl(0deg, 0%, 100%);
+  }
+  60% {
+    opacity: 1;
+    text-shadow: 0 0 40px hsl(0deg, 0%, 100%);
+  }
+  75% {
+    opacity: 1;
+    text-shadow: 0 0 10px hsl(0deg, 0%, 100%);
+  }
+  90% {
+    opacity: 1;
+    text-shadow: 0 0 5px hsl(0deg, 0%, 100%);
+  }
+  100% {
+    opacity: 1;
+    color: white;
+  }
+}/*# sourceMappingURL=anime.css.map */

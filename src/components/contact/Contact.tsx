@@ -1,40 +1,82 @@
-import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import { useState, FC } from "react";
+
 import Header from "../UI/Header/Header";
 import { AiOutlineMail, AiOutlineWhatsApp, AiFillWechat } from "react-icons/ai";
 import { RiMailOpenLine } from "react-icons/ri";
+import { CgSpinner } from "react-icons/cg";
 import "./contact.css";
 import Modal from "../UI/Modal/Modal";
-
-const Contact = () => {
-  const form = useRef<HTMLFormElement>(null);
-  const [isSent, setIsSetn] = useState(false);
+import useForm from "../Validation/useForm";
+interface User {
+  subject: string;
+  name: string;
+  email: string;
+  message: string;
+}
+// !手机版本输入一个东西的时候，按enter直接提交了。这是一个bug
+const Contact: FC = () => {
   const [showModal, setShowModal] = useState(false);
-
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    if (form.current) {
-      emailjs
-        .sendForm(
-          `${import.meta.env.VITE_EMAILJS_SERVICE_KEY}`,
-          `${import.meta.env.VITE_EMAILJS_TEMPLATE_KEY}`,
-          form.current,
-          `${import.meta.env.VITE_EMAILJS_PUBLIC_KEY}`
-        )
-        .then(
-          (result) => {
-            setIsSetn(true);
-            console.log(result);
-          },
-          (error) => {
-            console.log(error.text);
-          }
-        );
-
-      form.current.reset();
-    }
-  };
+  const {
+    handleSubmit,
+    handleChange,
+    data: user,
+    errors,
+    isSent,
+  } = useForm<User>({
+    validations: {
+      subject: {
+        custom: {
+          isValid: (value) => value.trim().length > 0,
+          message: "Cannot submit empty message",
+        },
+        pattern: {
+          value: "^[A-Za-z\\s]*$",
+          message:
+            "You're not allowed to use special characters or numbers in the subject",
+        },
+      },
+      name: {
+        custom: {
+          isValid: (value) => value.trim().length > 0,
+          message: "Cannot submit empty message",
+        },
+        pattern: {
+          value: "^[A-Za-z\\s]*$",
+          message:
+            "You're not allowed to use special characters or numbers in the subject",
+        },
+      },
+      email: {
+        custom: {
+          isValid: (value) => value.trim().length > 0,
+          message: "Cannot submit empty message",
+        },
+        pattern: {
+          value:
+            "^([\\w+\\!\\#\\$\\%\\&\\’\\*\\+\\-\\/\\=\\?\\^\\_\\`\\{\\|\\}\\~])+((\\.?)([\\w+\\!\\#\\$\\%\\&\\’\\*\\+\\-\\/\\=\\?\\^\\_\\`\\{\\|\\}\\~]))+\\@[a-zA-Z0-9-]+((\\.?)([a-zA-Z0-9-]+))+$",
+          message: "Please enter a valid email address",
+        },
+      },
+      message: {
+        custom: {
+          isValid: (value) => value.trim().length > 0,
+          message: "Cannot submit empty message",
+        },
+        pattern: {
+          value: '^[a-zA-Z0-9\\s\\.\\,\\?\\"\\!\\=]+$',
+          message:
+            "Your're not allowed to use Special characters except . ? , \" and !",
+        },
+      },
+    },
+    onSubmit: () => console.log("submitted"),
+    initialValues: {
+      subject: "",
+      name: "",
+      email: "",
+      message: "",
+    },
+  });
 
   return (
     <div className="contact_container">
@@ -76,15 +118,47 @@ const Contact = () => {
             )}
           </div>
         </div>
-        <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name="subject" placeholder="Title" />
-
-          <input type="text" name="name" placeholder="May I have your name?" />
-
-          <input type="email" name="email" placeholder="Email" />
-
-          <textarea name="message" placeholder="Tell me if I get hired" />
-          <input type="submit" value="Send" className="btn btn_primary" />
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="subject"
+            placeholder="Title"
+            required
+            value={user.subject || ""}
+            onChange={handleChange("subject")}
+          />
+          {errors.subject && <p className="error">{errors.subject}</p>}
+          <input
+            type="text"
+            name="name"
+            placeholder="May I have your name?"
+            required
+            value={user.name || ""}
+            onChange={handleChange("name")}
+          />
+          {errors.name && <p className="error">{errors.name}</p>}
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+            value={user.email || ""}
+            onChange={handleChange("email")}
+          />
+          {errors.email && <p className="error">{errors.email}</p>}
+          <textarea
+            name="message"
+            placeholder="Tell me if I get hired"
+            required
+            value={user.message || ""}
+            onChange={handleChange("message")}
+          />
+          {errors.message && <p className="error">{errors.message}</p>}
+          {isSent ? (
+            <CgSpinner className="spinner" />
+          ) : (
+            <input type="submit" value="Send" className="btn btn_primary" />
+          )}
         </form>
       </div>
     </div>

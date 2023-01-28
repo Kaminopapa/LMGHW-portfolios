@@ -10,11 +10,12 @@
 .about_me_container .me_content {
   width: 100%;
   height: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
   margin-top: 6rem;
-  row-gap: 1em;
+  row-gap: 2em;
 }
 .about_me_container .me_content img {
   width: 260px;
@@ -43,10 +44,6 @@
   text-align: center;
   transition: transition 4s;
 }
-.about_me_container .me_content .intro .about_cards .about_card .about_icon {
-  color: var(--color-primary);
-  font-size: 1.4rem;
-}
 .about_me_container .me_content .intro .about_cards .about_card h5 {
   font-size: 0.9rem;
 }
@@ -56,6 +53,42 @@
 }
 .about_me_container .me_content .intro p {
   margin: 1rem 0;
+}
+.about_me_container .me_content .doing_list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-flow: column;
+}
+.about_me_container .me_content .doing_list .todos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: row;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  padding: 1rem;
+}
+.about_me_container .me_content .doing_list .todos .about_icon {
+  font-size: 4rem;
+}
+.about_me_container .me_content .doing_list .todos .todo {
+  width: 100%;
+}
+.about_me_container .me_content .doing_list .todos .todo h3 {
+  color: var(--light);
+  font-weight: bold;
+}
+.about_me_container .me_content .doing_list .todos .todo p {
+  color: var(--color-light);
+}
+
+.about_icon {
+  color: var(--color-primary);
+  font-size: 1.4rem;
 }
 
 @-webkit-keyframes anim {
@@ -112,28 +145,21 @@
   }
 }
 @media (min-width: 1800px) {
-  .about_me_container {
-    overflow: hidden;
-  }
   .about_me_container .me_content {
-    grid-template-columns: 1fr 1fr;
     align-items: center;
+    -moz-column-gap: 3%;
+         column-gap: 3%;
   }
   .about_me_container .me_content img {
-    width: 650px;
+    width: 500px;
     height: 500px;
   }
   .about_me_container .me_content .intro {
-    width: 100%;
+    width: 45%;
     text-align: left;
   }
   .about_me_container .me_content .intro .about_cards {
     gap: 3rem;
-  }
-  .about_me_container .me_content .intro .about_cards .about_card .about_icon {
-    color: var(--color-primary);
-    font-size: 2rem;
-    margin-bottom: 1rem;
   }
   .about_me_container .me_content .intro .about_cards .about_card h5 {
     font-size: 1rem;
@@ -145,4 +171,18 @@
     margin: 1.5rem 0;
     font-size: 1.2rem;
   }
+  .about_me_container .me_content .doing_list {
+    width: 100vw;
+    flex-flow: row wrap;
+  }
+  .about_me_container .me_content .doing_list h2 {
+    width: 100%;
+  }
+  .about_me_container .me_content .doing_list .todos {
+    width: 50%;
+  }
+}
+.about_icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }/*# sourceMappingURL=aboutme.css.map */

@@ -19,7 +19,7 @@
     rgba(6, 6, 6, 0) 100%
   );
   --i: 0;
-  --color-light: rgb(119, 114, 114);
+  --color-dark-light: rgb(119, 114, 114);
   --desktopSize: 90%;
   --color-light: rgba(255, 255, 255, 0.6);
   --color-primary: #489250;
@@ -154,6 +154,12 @@ h1 {
 .main_container.light .border .container {
   background-color: var(--light);
 }
+.main_container.light .border .container .home_container .intro_animation .saperate span {
+  opacity: 1;
+  color: black;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
 .main_container.light .border .container .bg .iconContainer .icon_bg {
   background: var(--bigShadowLight);
 }
@@ -193,6 +199,15 @@ h1 {
 }
 .main_container.light .border .container .about_me_container .me_content .intro .btn:hover {
   color: var(--color-primary);
+}
+.main_container.light .border .container .about_me_container .me_content .doing_list {
+  color: var(--dark);
+}
+.main_container.light .border .container .about_me_container .me_content .doing_list .todos .todo h3 {
+  color: var(--dark);
+}
+.main_container.light .border .container .about_me_container .me_content .doing_list .todos .todo p {
+  color: var(--color-dark-light);
 }
 .main_container.light .border .container .contact_container .form_area form {
   box-shadow: 15px 15px 15px gray;

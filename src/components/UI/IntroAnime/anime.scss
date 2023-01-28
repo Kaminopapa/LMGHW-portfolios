@@ -1,0 +1,166 @@
+.intro_animation {
+  position: relative;
+  .saperate {
+    span {
+      transition: all 1s linear;
+      font-size: 3rem;
+      opacity: 0;
+      animation: showUp 3s linear;
+      animation-fill-mode: forwards;
+      animation-delay: 5s;
+    }
+  }
+  .hello {
+    &::before {
+      display: block;
+      position: absolute;
+      width: max-content;
+      content: "Hello";
+      margin: 0 auto;
+      top: 20%;
+      left: 20%;
+      animation: Hello 5s ease-in;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+@media (min-width: 1080px) {
+  .intro_animation {
+    .saperate {
+      cursor: pointer;
+      &:hover {
+        span {
+          color: white;
+          text-shadow: 0 0 10px hsl(0, 0%, 100%), 0 0 20px hsl(0, 0%, 100%),
+            0 0 40px hsl(0, 0%, 100%);
+          /* letter Luis */
+          &:nth-child(1) {
+            margin-right: 2px;
+          }
+
+          &:nth-child(1):after {
+            content: "uis";
+          }
+
+          /* letter Mi */
+          &:nth-child(2) {
+            margin-left: 10px;
+          }
+
+          &:nth-child(2):after {
+            content: "i";
+          }
+
+          /* letter Guel */
+          &:nth-child(3) {
+            text-transform: lowercase;
+          }
+
+          &:nth-child(3):after {
+            content: "uel";
+          }
+
+          &:nth-child(4) {
+            margin-left: 10px;
+          }
+
+          &:nth-child(4):after {
+            content: "ung";
+          }
+
+          &:nth-child(5) {
+            margin-left: 10px;
+          }
+
+          &:nth-child(5):after {
+            content: "u";
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes Hello {
+  0% {
+    color: transparent;
+  }
+
+  10% {
+    color: rgba(255, 255, 255, 0.041);
+  }
+
+  20% {
+    color: white;
+  }
+
+  40% {
+    color: transparent;
+  }
+
+  60% {
+    content: "I am";
+    color: rgba(255, 255, 255, 0.041);
+  }
+
+  70% {
+    content: "I am";
+    color: white;
+  }
+
+  80% {
+    content: "I am";
+    color: rgba(255, 255, 255, 0.041);
+  }
+
+  90% {
+    color: transparent;
+  }
+
+  95% {
+    opacity: 0;
+  }
+  100% {
+    content: "";
+    display: none;
+  }
+}
+@keyframes showUp {
+  0% {
+    opacity: 1;
+    color: transparent;
+  }
+
+  15% {
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.041);
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  45% {
+    opacity: 1;
+    text-shadow: 0 0 10px hsl(0, 0%, 100%);
+  }
+
+  60% {
+    opacity: 1;
+    text-shadow: 0 0 40px hsl(0, 0%, 100%);
+  }
+
+  75% {
+    opacity: 1;
+    text-shadow: 0 0 10px hsl(0, 0%, 100%);
+  }
+
+  90% {
+    opacity: 1;
+    text-shadow: 0 0 5px hsl(0, 0%, 100%);
+  }
+
+  100% {
+    opacity: 1;
+    color: white;
+  }
+}

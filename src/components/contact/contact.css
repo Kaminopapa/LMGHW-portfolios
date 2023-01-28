@@ -53,6 +53,17 @@
   padding: 0.5em 1em;
   cursor: pointer;
 }
+.contact_container .form_area form .error {
+  color: lightcoral;
+}
+.contact_container .form_area form .spinner {
+  font-size: 3rem;
+  margin-top: 10px;
+  color: var(--color-primary);
+  -webkit-animation: loading 2s linear infinite;
+          animation: loading 2s linear infinite;
+  transform-origin: 50% 50% 0;
+}
 .contact_container .form_area .other_contact {
   width: 100%;
   display: flex;
@@ -204,5 +215,21 @@
   100% {
     transform: translateY(-1000rem);
     display: none;
+  }
+}
+@-webkit-keyframes loading {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
   }
 }/*# sourceMappingURL=contact.css.map */

@@ -51,6 +51,16 @@
         padding: 0.5em 1em;
         cursor: pointer;
       }
+      .error {
+        color: lightcoral;
+      }
+      .spinner {
+        font-size: 3rem;
+        margin-top: 10px;
+        color: var(--color-primary);
+        animation: loading 2s linear infinite;
+        transform-origin: 50% 50% 0;
+      }
     }
     .other_contact {
       width: 100%;
@@ -213,5 +223,13 @@
     transform: translateY(-1000rem);
 
     display: none;
+  }
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
   }
 }

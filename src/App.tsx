@@ -1,5 +1,5 @@
 import Skills from "./components/Skills/Skills";
-
+import Home from "./components/Home/Home";
 import Handle from "./components/UI/switch/Handle";
 import Portfolio from "./components/portfolio/Portfolio";
 import AboutMe from "./components/About_me/AboutMe";
@@ -13,7 +13,7 @@ function App() {
   const currentTabs = useAppSelector(tabs).tab;
   const dayNightMode = (s: RootState) => s.day_night_mode;
   const currentMode = useAppSelector(dayNightMode);
-  //::想办法让他们重叠在一起
+
   return (
     <>
       <main
@@ -25,7 +25,7 @@ function App() {
         <div className="border">
           <NavigationBar />
           <div className={currentTabs === "Home" ? "container" : "bye"}>
-            <h1>HOME</h1>
+            <Home />
           </div>
           <div className={currentTabs === "about_me" ? "container" : "bye"}>
             <AboutMe />
