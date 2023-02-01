@@ -84,7 +84,7 @@ const Contact: FC = () => {
       <div className="form_area">
         <div className="other_contact">
           <div className="business_card ">
-            <h1>Luis Miguel Hung Wu</h1>
+            <h1>Luis Hung</h1>
             <h3>Front End Developer</h3>
             <p>
               <strong>Email:</strong>{" "}

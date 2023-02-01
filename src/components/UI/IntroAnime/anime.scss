@@ -18,7 +18,10 @@
       content: "Hello";
       margin: 0 auto;
       top: 20%;
-      left: 20%;
+
+      width: 100%;
+      text-align: center;
+
       animation: Hello 5s ease-in;
       animation-fill-mode: forwards;
     }

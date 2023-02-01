@@ -5,4 +5,35 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-flow: column;
+}
+.home_container .cta {
+  opacity: 0;
+  -webkit-animation: showCta 2s ease 1;
+          animation: showCta 2s ease 1;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  display: flex;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+
+@-webkit-keyframes showCta {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showCta {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=home.css.map */
