@@ -13,7 +13,7 @@ interface User {
   email: string;
   message: string;
 }
-// !手机版本输入一个东西的时候，按enter直接提交了。这是一个bug
+
 const Contact: FC = () => {
   const [showModal, setShowModal] = useState(false);
   const {

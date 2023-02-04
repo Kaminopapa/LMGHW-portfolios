@@ -1,0 +1,29 @@
+.header__socials {
+  display: none;
+}
+@media (min-width: 1800px) {
+  .header__socials {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    position: absolute;
+    right: -5%;
+    bottom: 0;
+    color: var(--color-primary);
+
+    .socialIcon {
+      color: var(--color-primary);
+      filter: brightness(80%);
+      font-size: 1.5rem;
+      &:hover {
+        filter: brightness(100%);
+      }
+    }
+    &::after {
+      content: "";
+      width: 1px;
+      height: 2rem;
+      background: var(--color-primary);
+    }
+  }
+}

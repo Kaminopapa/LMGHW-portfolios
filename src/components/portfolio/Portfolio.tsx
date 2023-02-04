@@ -12,12 +12,11 @@ const Item = ({ children }: propsItem) => {
   return (
     <div className="card" id="someid">
       {children}
-      {/* <img /> */}
     </div>
   );
 };
 const Portfolio = ({ children }: any) => {
-  const [activeCard, setActiveCard] = useState(0); //从中间开始
+  const [activeCard, setActiveCard] = useState(0); //start from the middle
   const [paused, setPaused] = useState(false);
 
   const updateIndex = (newIndex: number) => {

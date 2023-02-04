@@ -138,17 +138,25 @@ h1 {
     background-color: var(--light);
     .container {
       background-color: var(--light);
+      //!Home
       .home_container {
+        .avatar {
+          background: var(--bigShadowLight);
+        }
         .intro_animation {
           .saperate {
-            span {
-              opacity: 1;
-              color: black;
-              animation-fill-mode: backwards;
+            opacity: 1;
+            color: black;
+            animation-fill-mode: backwards;
+          }
+          .short_intro {
+            p {
+              color: gray;
             }
           }
         }
       }
+
       //! skills
       .bg {
         .iconContainer {

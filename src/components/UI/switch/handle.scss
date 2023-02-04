@@ -1,7 +1,6 @@
 .handle {
-  position: absolute;
+  position: fixed;
   width: 5px;
-
   background-color: var(--handle-color);
   top: 0;
   z-index: 200;

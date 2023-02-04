@@ -29,7 +29,7 @@ const AboutMe = () => {
             <div className="about_card">
               <BiCodeCurly className="about_icon" />
               <h5>Coding Experiences</h5>
-              <small>4+years</small>
+              <small>3+years</small>
             </div>
             <div className="about_card">
               <VscFolderLibrary className="about_icon" />
@@ -39,11 +39,14 @@ const AboutMe = () => {
           </div>
           <p>
             Heellooo~ This is Luis from Venezuela.
-            <br /> When I first came into contact with web development, I was
-            deeply attracted. I have always been a person full of fantasies, and
-            all kinds of thoughts often come into my mind. Now, these ideas have
-            a chance to show to everyone -&gt; Encode them into the real world !
-            This is what I have always wanted to do and what I am doing.
+            <br />
+            When I first printed Hello World, I was fascinated by Software
+            development. But my career in Software Development was never just a
+            job. It was always an opportunity to learn and improve my skill
+            sets. I have always been a person full of fantasies, and all kinds
+            of thoughts often come into my mind. Now, these ideas have a chance
+            to be seen by everyone -{">"} Encode them into the real world! This
+            is what I have always wanted to do and what I am doing.
           </p>
           <a className="btn btn_primary" onClick={toContact}>
             Let's Talk

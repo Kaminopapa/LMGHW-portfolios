@@ -154,11 +154,17 @@ h1 {
 .main_container.light .border .container {
   background-color: var(--light);
 }
-.main_container.light .border .container .home_container .intro_animation .saperate span {
+.main_container.light .border .container .home_container .avatar {
+  background: var(--bigShadowLight);
+}
+.main_container.light .border .container .home_container .intro_animation .saperate {
   opacity: 1;
   color: black;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
+}
+.main_container.light .border .container .home_container .intro_animation .short_intro p {
+  color: gray;
 }
 .main_container.light .border .container .bg .iconContainer .icon_bg {
   background: var(--bigShadowLight);

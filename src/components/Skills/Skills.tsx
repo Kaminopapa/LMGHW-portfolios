@@ -132,7 +132,6 @@ const Skills = () => {
         <div className="card">
           <div className="icon_box">{item.logo}</div>
           <div className="textBx">
-            {/* <h2>{item.name}</h2> */}
             <ul className="sci">
               {item.links.map((link) => (
                 <li key={link.name}>
