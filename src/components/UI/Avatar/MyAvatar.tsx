@@ -47,6 +47,7 @@ export function Model(props: JSX.IntrinsicElements["group"]) {
   useEffect(() => {
     actions["Armature|mixamo.com|Layer0"]?.play();
   });
+
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">

@@ -248,7 +248,7 @@ h1 {
 }
 .main_container.light nav a::after,
 .main_container.light nav::after {
-  background-color: var(--dark);
+  background-color: var(--color-primary);
 }
 
 @media (min-width: 768px) {
@@ -258,13 +258,14 @@ h1 {
     align-items: center;
   }
   .main_container.light nav {
-    background-color: var(--dark);
+    background-color: var(--color-primary);
+    border: none;
   }
   .main_container.light nav a {
     color: var(--light);
   }
   .main_container.light nav a.active {
-    background-color: var(--dark);
+    background-color: var(--color-primary);
     border-color: var(--light);
   }
   .main_container.light .contact_container .other_contact {

@@ -108,35 +108,39 @@ const Carousel = () => {
         />
       ),
       title: "UniDiy",
-      description: "Wechat base applet",
+      description:
+        "An e-commerce plug-in for WeChat with robust features for customized phone cases.",
       demo: "https://unidiy-image-editor.weivee.com/",
+      finished: true,
     },
     {
       id: 2,
       image: "/onebook.png",
       title: "ONE BOOK",
-      description:
-        "An In progress online Chinese fiction reading website. Tech stack including React Typescript Axio API SCSS",
+      description: "E-book web application built with React and TypeScript. ",
       github: "https://github.com/Kaminopapa/OneBook",
       demo: "https://one-book.netlify.app/",
+      finished: true,
     },
     {
       id: 3,
       image: "/mileyLogo.png",
       title: "Miley Design",
       description:
-        "A portfolio website built for a graphic designer. Tech stack including React.js CSS3",
+        "Miley's portfolio website built with ReactJS featuring fully responsive design.",
       github: "https://github.com/Kaminopapa/MileyDesignn",
       demo: "https://kaminopapa.github.io/MileyDesignn/",
+      finished: false,
     },
 
     {
       id: 4,
       image: "/ven2.jpg",
       title: "Welcome to Venezuela",
-      description: "HTML5 CSS3 JavaScript",
+      description: "A travel interface about Venezuela.",
       github: "https://github.com/Kaminopapa/Kaminopapa.github.io",
       demo: "https://kaminopapa.github.io/",
+      finished: false,
     },
 
     {
@@ -144,9 +148,10 @@ const Carousel = () => {
       image: "/course.jpg",
       title: "MERN Project",
       description:
-        "Registration system simulation allows users login with different roles doing different actions. Tech stack including React.js express.js MongoDB JWT",
+        "A full-stack project offering online courses for teachers and students. ",
       github: "https://github.com/Kaminopapa/CourseResgister",
       demo: "https://studynet.netlify.app/",
+      finished: false,
     },
   ];
 
@@ -161,6 +166,7 @@ const Carousel = () => {
               demo={item.demo}
               title={item.title}
               description={item.description}
+              inProgress={item.finished}
             />
           </Item>
         );

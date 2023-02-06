@@ -1,0 +1,40 @@
+.loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  opacity: 1;
+
+  img {
+    width: 200px;
+    height: 200px;
+    animation: breathing 1s linear infinite;
+  }
+  animation: bye 2s linear 1;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
+@keyframes breathing {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bye {
+  0%,
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -10000;
+  }
+}

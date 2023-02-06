@@ -3,16 +3,16 @@
   text-align: center;
   .saperate {
     transition: all 1s linear;
-    font-size: 3rem;
+    font-size: 2.5rem;
     opacity: 0;
     animation: showUp 3s linear;
     animation-fill-mode: forwards;
-    animation-delay: 5s;
+    animation-delay: 7s;
   }
 
   .short_intro {
     animation: showUp2 3s linear forwards;
-    animation-delay: 5s;
+    animation-delay: 7s;
     opacity: 0;
     p {
       color: var(--color-light);
@@ -38,8 +38,8 @@
       width: 100%;
       text-align: center;
       animation: Hello 5s ease-in;
-      animation-iteration-count: 1;
       animation-fill-mode: forwards;
+      animation-delay: 2s;
     }
   }
 }
@@ -47,7 +47,7 @@
   .intro_animation {
     .saperate {
       cursor: pointer;
-      font-size: 4rem;
+      font-size: 3.5rem;
       position: relative;
       text-align: center;
       &::before {
@@ -58,8 +58,8 @@
         width: 100px;
         height: 50px;
         position: absolute;
-        bottom: -16%;
-        left: -2rem;
+        bottom: -22%;
+        left: -2%;
       }
     }
     h3 {

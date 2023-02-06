@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { IoIosConstruct } from "react-icons/io";
+import { AiFillCheckCircle } from "react-icons/ai";
 import "./card.css";
 interface cardProps {
   image: string | React.ReactNode;
@@ -6,8 +8,16 @@ interface cardProps {
   github?: string;
   title: string;
   description?: string;
+  inProgress: boolean;
 }
-const Card = ({ image, demo, github, title, description }: cardProps) => {
+const Card = ({
+  image,
+  demo,
+  github,
+  title,
+  description,
+  inProgress,
+}: cardProps) => {
   const [show, setShow] = useState(false); //mobile rotate
 
   return (
@@ -42,6 +52,13 @@ const Card = ({ image, demo, github, title, description }: cardProps) => {
             : {}
         }
       >
+        <div className="badge">
+          {inProgress ? (
+            <IoIosConstruct color="orange" />
+          ) : (
+            <AiFillCheckCircle color="lightGreen" />
+          )}
+        </div>
         <h2>{title}</h2>
         <p>{description}</p>
 

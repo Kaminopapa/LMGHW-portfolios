@@ -4,20 +4,20 @@
 }
 .intro_animation .saperate {
   transition: all 1s linear;
-  font-size: 3rem;
+  font-size: 2.5rem;
   opacity: 0;
   -webkit-animation: showUp 3s linear;
           animation: showUp 3s linear;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
 }
 .intro_animation .short_intro {
   -webkit-animation: showUp2 3s linear forwards;
           animation: showUp2 3s linear forwards;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
   opacity: 0;
 }
 .intro_animation .short_intro p {
@@ -45,16 +45,16 @@
   text-align: center;
   -webkit-animation: Hello 5s ease-in;
           animation: Hello 5s ease-in;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 @media (min-width: 1080px) {
   .intro_animation .saperate {
     cursor: pointer;
-    font-size: 4rem;
+    font-size: 3.5rem;
     position: relative;
     text-align: center;
   }
@@ -66,8 +66,8 @@
     width: 100px;
     height: 50px;
     position: absolute;
-    bottom: -16%;
-    left: -2rem;
+    bottom: -22%;
+    left: -2%;
   }
   .intro_animation h3 {
     font-size: large;

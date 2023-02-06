@@ -6,7 +6,8 @@ import AboutMe from "./components/About_me/AboutMe";
 import Contact from "./components/contact/Contact";
 import "./App.css";
 import NavigationBar from "./components/Navigation_Bar/NavigationBar";
-import { RootState, useAppSelector, useAppDispatch } from "./store";
+import { RootState, useAppSelector } from "./store";
+import Loading from "./components/UI/IntroAnime/loading/Loading";
 
 function App() {
   const tabs = (s: RootState) => s.select_nav;
@@ -21,6 +22,7 @@ function App() {
           currentMode.isDay ? "main_container light" : "main_container"
         }
       >
+        <Loading />
         <Handle />
         <div className="border">
           <NavigationBar />

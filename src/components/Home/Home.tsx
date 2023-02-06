@@ -5,12 +5,13 @@ import { selectTab } from "../../store/navSlice";
 import CV from "/CV.pdf";
 import Scene from "../UI/Avatar/AvatarScene";
 import Socials from "../UI/Social/Social";
+
 const Home = () => {
   const dispatch = useAppDispatch();
-
   const toContact = () => {
     dispatch(selectTab("contact"));
   };
+
   return (
     <div className="home_container">
       <div className="avatar">
