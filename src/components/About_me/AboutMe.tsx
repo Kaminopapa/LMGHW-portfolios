@@ -6,6 +6,8 @@ import { VscFolderLibrary } from "react-icons/vsc";
 import { useAppDispatch } from "../../store";
 import { selectTab } from "../../store/navSlice";
 import { FaConnectdevelop, FaGuitar } from "react-icons/fa";
+import { CgGym } from "react-icons/cg";
+import { MdSnowboarding } from "react-icons/md";
 const AboutMe = () => {
   const dispatch = useAppDispatch();
 
@@ -70,15 +72,57 @@ const AboutMe = () => {
             </div>
           </div>
           <div className="todos">
+            <MdSnowboarding className="about_icon" />
+            <div className="todo">
+              <h3>Snowboarding</h3>
+              <p>
+                As a beginner snowboarder in the 2022 season, I come from a
+                tropical background with limited exposure to the sport. However,
+                I was determined to break out of my comfort zone and experience
+                new adventures. I wanted my life to be full of possibilities,
+                and snowboarding seemed like the perfect opportunity to pursue a
+                new challenge and dream. So, I took the leap and started my
+                journey on the slopes, eager to explore the wonders of winter
+                sports
+              </p>
+            </div>
+          </div>
+          <div className="todos">
             <FaGuitar className="about_icon" />
             <div className="todo">
               <h3>Play Guitar</h3>
               <p>
-                I'm a relatively new guitar learner, love playing it with
-                friends at parties. I like to use a guitar to express my mood.
-                Taking a moment and sit down to play a song will make me calm
-                and peaceful. Life is joyous and complex; why not enjoy a moment
-                that only belongs to me.
+                As a guitar enthusiast, my ten-year journey of playing the
+                instrument has been a beautiful expression of my emotions. Each
+                time my left hand masterfully presses down the strings, creating
+                melodic scales, and my right hand gracefully strums chords, a
+                sense of tranquillity washes over me. Life may be filled with
+                both joy and complexity, but in these moments with my guitar, I
+                find solace and peace. My love for music shines through, and I
+                approach life's complexities with courage and grace. My music is
+                a reminder that amidst the complexities of life, there is always
+                beauty to be found.
+              </p>
+            </div>
+          </div>
+
+          <div className="todos">
+            <CgGym className="about_icon" />
+            <div className="todo">
+              <h3>GYM</h3>
+              <p>
+                Although the temporary discomfort of working out may not seem
+                appealing, the process of pushing beyond your limits and
+                transforming my body is truly inspirational. Every time I break
+                through a personal barrier and see my body becoming stronger and
+                more defined, I am celebrating the power of the human spirit. By
+                embracing discipline and dedicating myself to my workout
+                routine, I have taken control of my mind and body and elevated
+                my soul to new heights. My determination and commitment to
+                self-improvement serve as a source of inspiration, reminding me
+                that with hard work and perseverance, anything is possible. Keep
+                chasing my dreams and never give up on my quest for a healthier
+                and happier life.
               </p>
             </div>
           </div>
