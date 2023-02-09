@@ -1,4 +1,4 @@
-.bg {
+.skill_container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -8,7 +8,7 @@
   position: relative;
 }
 
-.iconContainer {
+.icon_container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -16,7 +16,7 @@
   align-items: center;
   position: absolute;
 }
-.iconContainer .icon_bg {
+.icon_container .icon_bg {
   position: absolute;
   width: 20rem;
   height: 20rem;
@@ -24,7 +24,7 @@
   border: 1px solid transparent;
   border-radius: 50%;
 }
-.iconContainer .icon_bg .icon {
+.icon_container .icon_bg .icons {
   position: absolute;
   left: -50%;
   width: 100%;
@@ -35,7 +35,7 @@
   cursor: pointer;
   transition: 0.5s;
 }
-.iconContainer .icon_bg .icon .icon_box {
+.icon_container .icon_bg .icons .skill_box {
   position: absolute;
   width: 30px;
   height: 30px;
@@ -46,14 +46,14 @@
   z-index: 100;
   overflow: hidden;
 }
-.iconContainer .icon_bg .icon .icon_box.active {
+.icon_container .icon_bg .icons .skill_box.active {
   border: 2px solid white;
   transition: border 0.1s ease;
 }
-.iconContainer .icon_bg .icon .icon_box.active .logo {
+.icon_container .icon_bg .icons .skill_box.active .skill_icon {
   filter: grayscale(0);
 }
-.iconContainer .icon_bg .icon .icon_box .logo {
+.icon_container .icon_bg .icons .skill_box .skill_icon {
   position: absolute;
   top: 0;
   left: 0;
@@ -94,13 +94,13 @@
   align-items: center;
   flex-direction: column;
 }
-.content .contentBX .card .icon_box {
+.content .contentBX .card .skill_box {
   position: relative;
   width: 100px;
   height: 100px;
   overflow: hidden;
 }
-.content .contentBX .card .icon_box .logo {
+.content .contentBX .card .skill_box .skill_icon {
   position: absolute;
   top: 0;
   left: 0;
@@ -148,29 +148,12 @@
   padding: 3px;
 }
 
-@-webkit-keyframes animte_01 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes animte_01 {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes animte_02 {
-  0% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0deg);
   }
 }
 @keyframes animte_02 {
@@ -182,25 +165,25 @@
   }
 }
 @media (min-width: 1090px) {
-  .iconContainer {
+  .icon_container {
     width: var(--desktopSize);
   }
-  .iconContainer .icon_bg {
+  .icon_container .icon_bg {
     width: 40.777rem;
     height: 40.777rem;
     margin-top: 5rem;
   }
-  .iconContainer .icon_bg .icon .icon_box {
+  .icon_container .icon_bg .icons .skill_box {
     transform-origin: 350px;
     width: 50px;
     height: 50px;
   }
-  .iconContainer .icon_bg .icon .icon_box.active {
+  .icon_container .icon_bg .icons .skill_box.active {
     width: 70px;
     height: 70px;
     transform-origin: 360px;
   }
-  .iconContainer .icon_bg .icon .icon_box.active .logo {
+  .icon_container .icon_bg .icons .skill_box.active .skill_icon {
     scale: 0.9;
   }
   .content {
@@ -209,7 +192,7 @@
   .content .contentBX {
     margin-top: 5%;
   }
-  .content .contentBX .card .icon_box {
+  .content .contentBX .card .skill_box {
     width: 200px;
     height: 200px;
   }

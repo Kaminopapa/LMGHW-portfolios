@@ -13,6 +13,7 @@ nav {
   backdrop-filter: blur(15px);
   animation: showNHide 1s linear;
   animation-fill-mode: forwards;
+  animation-delay: 2s;
 
   &::after {
     display: block;
@@ -38,6 +39,93 @@ nav {
   }
 }
 
+nav a {
+  background: transparent;
+  padding: 0.9rem;
+  border-radius: 50%;
+  display: flex;
+  color: var(--color-light);
+  font-size: 1.5rem;
+}
+
+nav a.active {
+  background: var(--color-primary);
+  color: var(--light);
+}
+
+@media (min-width: 1800px) {
+  nav {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 70px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transform: none;
+    height: 50%;
+    border-radius: 0 1rem 1rem 0;
+    background-color: var(--color-primary-variant);
+    transition: 0.3s;
+    transition-delay: 0.2s;
+    animation: collapseDesktop 1s ease;
+    animation-fill-mode: forwards;
+
+    &::after {
+      display: block;
+      content: "";
+      width: 5px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 7rem;
+      border-radius: 1rem;
+      background-color: rgba(31, 228, 74, 0.418);
+      transition: height 0.6s;
+      animation: expandLargeDevices 0.6s linear 1;
+    }
+    &::before {
+      display: block;
+      position: absolute;
+      content: "";
+
+      width: 5px;
+      height: 30px;
+      top: 50%;
+      left: 7rem;
+      background-color: var(--color-light);
+      border-radius: 1rem;
+      opacity: 1;
+      transition: opacity 0.6s;
+      animation: jump 7s linear infinite;
+      z-index: 12;
+    }
+    &:hover {
+      left: 0;
+      transition: left 0.03s;
+    }
+    &:hover::after {
+      animation-name: none;
+      top: 50%;
+      height: 0;
+      transition: 0.6s;
+    }
+    &:hover::before {
+      animation-name: none;
+      opacity: 0;
+    }
+  }
+
+  nav a {
+    transition: all 0.6s;
+  }
+  nav a.active {
+    border-radius: 50%;
+    border: 4px solid var(--dark);
+    transform: translateX(35px) rotate(1turn);
+  }
+}
+//Mobile animation
 @keyframes expandMobile {
   0% {
     width: 0%;
@@ -67,102 +155,44 @@ nav {
   }
 }
 
-nav a {
-  background: transparent;
-  padding: 0.9rem;
-  border-radius: 50%;
-  display: flex;
-  color: var(--color-light);
-  font-size: 1.5rem;
-}
-/* nav a:hover {
-  background: rgba(0, 0, 0.2);
-  transform: translateY(-10px);
-} */
+//large device animations
 
-nav a.active {
-  background: var(--color-primary);
-  color: var(--light);
+@keyframes expandLargeDevices {
+  0% {
+    top: 50%;
+    height: 20%;
+  }
+  50% {
+    top: 20%;
+    height: 70%;
+  }
+  100% {
+    top: 0;
+    height: 100%;
+  }
 }
-
-@media (min-width: 1800px) {
-  nav {
-    position: absolute;
-    top: 25%;
+@keyframes collapseDesktop {
+  0% {
+    left: 0;
+  }
+  100% {
     left: -6%;
-    width: 70px;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    transform: none;
-    height: 50%;
-
-    border-radius: 0 1rem 1rem 0;
-    background-color: var(--color-primary-variant);
-    transition: 0.3s;
-    transition-delay: 0.2s;
-
-    &::before {
-      content: "";
-      display: block;
-      width: 50px;
-      height: 50px;
-      background-repeat: no-repeat;
-      background-image: url(/logo.svg);
-    }
-    &::after {
-      display: block;
-      content: "";
-      width: 5px;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 8rem;
-      border-radius: 1rem;
-      background-color: rgba(31, 228, 74, 0.418);
-      transition: height 0.6s;
-      animation: expandLargeDevices 0.6s linear 1;
-    }
-    &:hover {
-      left: 0;
-      transition: left 0.03s;
-    }
-    &:hover::after {
-      animation-name: none;
-      top: 50%;
-      height: 0;
-      transition: 0.6s;
-    }
   }
-  @keyframes showBar {
-    0% {
-      left: -6%;
-    }
-    100% {
-      left: 0;
-    }
+}
+@keyframes jump {
+  0% {
+    top: 0;
   }
-  @keyframes expandLargeDevices {
-    0% {
-      top: 50%;
-      height: 20%;
-    }
-    50% {
-      top: 20%;
-      height: 70%;
-    }
-    100% {
-      top: 0;
-      height: 100%;
-    }
+  20% {
+    top: 40%;
   }
-
-  nav a {
-    transition: all 0.6s;
+  50% {
+    top: 90%;
   }
-  nav a.active {
-    border-radius: 50%;
-    border: 4px solid var(--dark);
-    transform: translateX(35px) rotate(1turn);
+  80% {
+    top: 40%;
+  }
+  100% {
+    top: 0;
   }
 }

@@ -17,7 +17,7 @@ const Home = () => {
       <div className="avatar">
         <Scene />
       </div>
-      <div className="my_name">
+      <div className="name_container">
         <IntroAnime />
         <div className="cta">
           <a className="btn" onClick={toContact}>

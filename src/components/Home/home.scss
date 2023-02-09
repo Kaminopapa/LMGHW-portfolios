@@ -8,7 +8,7 @@
   flex-flow: column;
   row-gap: 1rem;
 
-  .my_name {
+  .name_container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,7 +49,7 @@
         border-radius: 70% 30% 25% 75% / 38% 85% 15% 62%;
       }
     }
-    .my_name {
+    .name_container {
       width: 50%;
     }
   }

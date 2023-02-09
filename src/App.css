@@ -2,6 +2,7 @@
 @import url(/public/fonts/stylesheet.css);
 :root {
   --dark: #060606;
+  --bg_light: #d3d3d3;
   --light: #ffffff;
   --small_shadow: radial-gradient(
     50% 50% at 50% 50%,
@@ -40,11 +41,6 @@
 }
 
 ::-moz-placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  font-family: Poppins, sans-serif;
-}
-
-:-ms-input-placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   font-family: Poppins, sans-serif;
 }
@@ -131,13 +127,13 @@ h1 {
   color: var(--color-primary);
 }
 
-.bye {
+.container_off {
   transform: scale(0);
   opacity: 0;
 }
 
 .main_container.light {
-  background-color: var(--light);
+  background-color: var(--bg_light);
   transition-delay: 0.6s;
 }
 .main_container.light h1,
@@ -149,33 +145,32 @@ h1 {
 }
 .main_container.light .border {
   border-color: var(--dark);
-  background-color: var(--light);
+  background-color: var(--bg_light);
 }
 .main_container.light .border .container {
-  background-color: var(--light);
+  background-color: var(--bg_light);
 }
 .main_container.light .border .container .home_container .avatar {
   background: var(--bigShadowLight);
 }
-.main_container.light .border .container .home_container .intro_animation .saperate {
+.main_container.light .border .container .home_container .intro_animation .my_name {
   opacity: 1;
   color: black;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
 }
 .main_container.light .border .container .home_container .intro_animation .short_intro p {
   color: gray;
 }
-.main_container.light .border .container .bg .iconContainer .icon_bg {
+.main_container.light .border .container .skill_container .icon_container .icon_bg {
   background: var(--bigShadowLight);
 }
-.main_container.light .border .container .bg .iconContainer .icon_bg .icon .icon_box {
+.main_container.light .border .container .skill_container .icon_container .icon_bg .icons .skill_box {
   background-color: white;
 }
-.main_container.light .border .container .bg .iconContainer .icon_bg .icon .icon_box .active {
+.main_container.light .border .container .skill_container .icon_container .icon_bg .icons .skill_box .active {
   border-color: black;
 }
-.main_container.light .border .container .bg .iconContainer .icon_bg .icon .icon_box .logo {
+.main_container.light .border .container .skill_container .icon_container .icon_bg .icons .skill_box .skill_icon {
   border: 1px solid black;
 }
 .main_container.light .border .container .portfolio_container {
@@ -188,22 +183,22 @@ h1 {
 .main_container.light .border .container .portfolio_container .indicators .next {
   color: var(--dark);
 }
-.main_container.light .border .container .about_me_container .me_content .intro {
+.main_container.light .border .container .about_me_container .me_content .about_intro {
   color: var(--dark);
 }
-.main_container.light .border .container .about_me_container .me_content .intro .about_cards .about_card {
+.main_container.light .border .container .about_me_container .me_content .about_intro .about_cards .about_card {
   background: var(--color-primary);
 }
-.main_container.light .border .container .about_me_container .me_content .intro .about_cards .about_card h5 {
+.main_container.light .border .container .about_me_container .me_content .about_intro .about_cards .about_card h5 {
   color: var(--light);
 }
-.main_container.light .border .container .about_me_container .me_content .intro .about_cards .about_card .about_icon {
+.main_container.light .border .container .about_me_container .me_content .about_intro .about_cards .about_card .about_icon {
   color: var(--color-light);
 }
-.main_container.light .border .container .about_me_container .me_content .intro .btn {
+.main_container.light .border .container .about_me_container .me_content .about_intro .btn {
   color: var(--light);
 }
-.main_container.light .border .container .about_me_container .me_content .intro .btn:hover {
+.main_container.light .border .container .about_me_container .me_content .about_intro .btn:hover {
   color: var(--color-primary);
 }
 .main_container.light .border .container .about_me_container .me_content .doing_list {
@@ -289,5 +284,23 @@ h1 {
     width: 89%;
     height: 89%;
     top: auto;
+  }
+}
+@keyframes open {
+  0% {
+    bottom: 3rem;
+    left: 3rem;
+    width: 0rem;
+    height: 0rem;
+    -webkit-clip-path: circle(0rem at center);
+            clip-path: circle(0rem at center);
+  }
+  100% {
+    bottom: calc(-250vmax + 3rem);
+    left: calc(-250vmax + 3rem);
+    width: 500vmax;
+    height: 500vmax;
+    -webkit-clip-path: circle(100% at center);
+            clip-path: circle(100% at center);
   }
 }/*# sourceMappingURL=App.css.map */

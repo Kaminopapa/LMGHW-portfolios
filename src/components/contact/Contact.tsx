@@ -14,7 +14,7 @@ interface User {
   message: string;
 }
 
-const Contact: FC = () => {
+const Contact = () => {
   const [showModal, setShowModal] = useState(false);
   const {
     handleSubmit,

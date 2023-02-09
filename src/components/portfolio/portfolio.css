@@ -71,8 +71,8 @@
   color: var(--light);
   font-size: 4rem;
 }
-.portfolio_container .indicators .prev.noClick,
-.portfolio_container .indicators .next.noClick {
+.portfolio_container .indicators .prev.un_click,
+.portfolio_container .indicators .next.un_click {
   pointer-events: none;
   opacity: 0.5;
 }
@@ -86,7 +86,7 @@
     height: 5px;
   }
   .portfolio_container .indicators .prev,
-.portfolio_container .indicators .next {
+  .portfolio_container .indicators .next {
     color: white;
     font-size: 2rem;
   }

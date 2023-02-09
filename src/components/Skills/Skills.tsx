@@ -13,19 +13,19 @@ const Skills = () => {
     return { "--i": val } as React.CSSProperties;
   };
   const handleActive = (id: number) => {
-    const activeElement = icons.find((item) => item.id === id);
+    const activeElement = skillSet.find((item) => item.id === id);
     activeElement && setActive(id);
   };
-  const icons = [
+  const skillSet = [
     {
       id: 1,
-      logo: <FaGithub color="#F51212" className="logo" />,
+      logo: <FaGithub color="#F51212" className="skill_icon" />,
       name: "See my jobs",
       links: [{ name: "github", url: "https://github.com/Kaminopapa" }],
     },
     {
       id: 2,
-      logo: <FaLaravel color="#F22B1D" className="logo" />,
+      logo: <FaLaravel color="#F22B1D" className="skill_icon" />,
       name: "Laravel",
       links: [
         { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com" },
@@ -33,7 +33,7 @@ const Skills = () => {
     },
     {
       id: 3,
-      logo: <SiNextdotjs color="gray" className="logo" />,
+      logo: <SiNextdotjs color="gray" className="skill_icon" />,
       name: "Next.js",
       links: [
         { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com" },
@@ -41,7 +41,7 @@ const Skills = () => {
     },
     {
       id: 4,
-      logo: <IoLogoJavascript color="yellow" className="logo" />,
+      logo: <IoLogoJavascript color="yellow" className="skill_icon" />,
       name: "JavaScript",
       links: [
         { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com" },
@@ -50,7 +50,7 @@ const Skills = () => {
     },
     {
       id: 5,
-      logo: <IoLogoCss3 color="blue" className="logo" />,
+      logo: <IoLogoCss3 color="blue" className="skill_icon" />,
       name: "CSS",
       links: [
         { name: "One Book", url: "https://one-book.netlify.app/" },
@@ -63,19 +63,19 @@ const Skills = () => {
     },
     {
       id: 6,
-      logo: <IoLogoNodejs color="lightGreen" className="logo" />,
+      logo: <IoLogoNodejs color="lightGreen" className="skill_icon" />,
       name: "Node.js",
       links: [{ name: "One Book", url: "https://one-book.netlify.app/" }],
     },
     {
       id: 7,
-      logo: <FaFigma color="pink" className="logo" />,
+      logo: <FaFigma color="pink" className="skill_icon" />,
       name: "Figma",
       links: [{ name: "figma", url: "" }],
     },
     {
       id: 8,
-      logo: <SiRedux color="purple" className="logo" />,
+      logo: <SiRedux color="purple" className="skill_icon" />,
       name: "redux",
       links: [
         { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com" },
@@ -84,7 +84,7 @@ const Skills = () => {
     },
     {
       id: 9,
-      logo: <FaPhp color="purple" className="logo" />,
+      logo: <FaPhp color="purple" className="skill_icon" />,
       name: "PhP",
       links: [
         { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com" },
@@ -92,7 +92,7 @@ const Skills = () => {
     },
     {
       id: 10,
-      logo: <FaReact color="lightblue" className="logo" />,
+      logo: <FaReact color="lightblue" className="skill_icon" />,
       name: "React",
       links: [
         { name: "One Book", url: "https://one-book.netlify.app/" },
@@ -106,7 +106,7 @@ const Skills = () => {
     },
     {
       id: 11,
-      logo: <SiTypescript color="lightblue" className="logo" />,
+      logo: <SiTypescript color="lightblue" className="skill_icon" />,
       name: "TypeScript",
       links: [
         { name: "Unidiy", url: ' "https://unidiy-image-editor.weivee.com"' },
@@ -115,14 +115,14 @@ const Skills = () => {
     },
     {
       id: 12,
-      logo: <RiVuejsLine color="green" className="logo" />,
+      logo: <RiVuejsLine color="green" className="skill_icon" />,
       name: "Vue.js",
       links: [
         { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com" },
       ],
     },
   ];
-  const other = icons.map((item, index = 1) => {
+  const other = skillSet.map((item, index = 1) => {
     return (
       <div
         className={item.id == active ? "contentBX active" : "contentBX"}
@@ -130,7 +130,7 @@ const Skills = () => {
         key={"s" + item.id}
       >
         <div className="card">
-          <div className="icon_box">{item.logo}</div>
+          <div className="skill_box">{item.logo}</div>
           <div className="textBx">
             <ul className="sci">
               {item.links.map((link) => (
@@ -147,24 +147,24 @@ const Skills = () => {
     );
   });
   return (
-    <div className="bg ">
+    <div className="skill_container">
       <Header subTitle="What Skills I Have" mainTitle="My Experiences" />
-      <div className="iconContainer">
+      <div className="icon_container">
         <div className="icon_bg">
-          <div className="icon">
-            {icons.map((icon, index = 1) => {
+          <div className="icons">
+            {skillSet.map((skill, index = 1) => {
               return (
                 <div
                   className={
-                    icon.id === active ? "icon_box active" : "icon_box"
+                    skill.id === active ? "skill_box active" : "skill_box"
                   }
                   style={position(index)}
-                  key={icon.id}
-                  onClick={() => handleActive(icon.id)}
+                  key={skill.id}
+                  onClick={() => handleActive(skill.id)}
                   data-id={`content${index}`}
-                  onMouseEnter={() => handleActive(icon.id)}
+                  onMouseEnter={() => handleActive(skill.id)}
                 >
-                  {icon.logo}
+                  {skill.logo}
                 </div>
               );
             })}

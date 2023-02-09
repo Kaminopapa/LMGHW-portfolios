@@ -26,19 +26,35 @@ function App() {
         <Handle />
         <div className="border">
           <NavigationBar />
-          <div className={currentTabs === "Home" ? "container" : "bye"}>
+          <div
+            className={currentTabs === "Home" ? "container" : "container_off"}
+          >
             <Home />
           </div>
-          <div className={currentTabs === "about_me" ? "container" : "bye"}>
+          <div
+            className={
+              currentTabs === "about_me" ? "container" : "container_off"
+            }
+          >
             <AboutMe />
           </div>
-          <div className={currentTabs === "portfolio" ? "container" : "bye"}>
+          <div
+            className={
+              currentTabs === "portfolio" ? "container" : "container_off"
+            }
+          >
             <Portfolio />
           </div>
-          <div className={currentTabs === "skill" ? "container" : "bye"}>
+          <div
+            className={currentTabs === "skill" ? "container" : "container_off"}
+          >
             <Skills />
           </div>
-          <div className={currentTabs === "contact" ? "container" : "bye"}>
+          <div
+            className={
+              currentTabs === "contact" ? "container" : "container_off"
+            }
+          >
             <Contact />
           </div>
         </div>

@@ -67,7 +67,7 @@ const Portfolio = ({ children }: any) => {
       </div>
       <div className="indicators">
         <MdArrowLeft
-          className={activeCard == 0 ? "prev noClick" : "prev"}
+          className={activeCard == 0 ? "prev un_click" : "prev"}
           onClick={() => {
             updateIndex(activeCard - 1);
           }}
@@ -85,7 +85,7 @@ const Portfolio = ({ children }: any) => {
         <MdArrowRight
           className={
             activeCard == React.Children.count(children) - 1
-              ? "next noClick"
+              ? "next un_click"
               : "next"
           }
           onClick={() => {
@@ -97,7 +97,7 @@ const Portfolio = ({ children }: any) => {
   );
 };
 const Carousel = () => {
-  const data = [
+  const my_works = [
     {
       id: 1,
       image: (
@@ -157,7 +157,7 @@ const Carousel = () => {
 
   return (
     <Portfolio>
-      {data.map((item) => {
+      {my_works.map((item) => {
         return (
           <Item key={"p" + item.id}>
             <Card

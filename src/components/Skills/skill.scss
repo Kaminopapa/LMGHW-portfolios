@@ -1,15 +1,14 @@
-.bg {
+.skill_container {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-
   flex-flow: column;
   position: relative;
 }
 
-.iconContainer {
+.icon_container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -24,7 +23,7 @@
     border: 1px solid transparent;
     border-radius: 50%;
 
-    .icon {
+    .icons {
       position: absolute;
       left: -50%;
       width: 100%;
@@ -35,7 +34,7 @@
       cursor: pointer;
       transition: 0.5s;
 
-      .icon_box {
+      .skill_box {
         position: absolute;
         width: 30px;
         height: 30px;
@@ -49,12 +48,12 @@
         &.active {
           border: 2px solid white;
           transition: border 0.1s ease;
-          .logo {
+          .skill_icon {
             filter: grayscale(0);
           }
         }
 
-        .logo {
+        .skill_icon {
           position: absolute;
           top: 0;
           left: 0;
@@ -99,13 +98,13 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      .icon_box {
+      .skill_box {
         position: relative;
         width: 100px;
         height: 100px;
         overflow: hidden;
 
-        .logo {
+        .skill_icon {
           position: absolute;
           top: 0;
           left: 0;
@@ -180,15 +179,15 @@
   // .head {
   //   top: 0;
   // }
-  .iconContainer {
+  .icon_container {
     width: var(--desktopSize);
     .icon_bg {
       width: 40.777rem;
       height: 40.777rem;
       margin-top: 5rem;
 
-      .icon {
-        .icon_box {
+      .icons {
+        .skill_box {
           transform-origin: 350px;
           width: 50px;
           height: 50px;
@@ -198,7 +197,7 @@
             height: 70px;
             transform-origin: 360px;
 
-            .logo {
+            .skill_icon {
               scale: 0.9;
             }
           }
@@ -213,7 +212,7 @@
     .contentBX {
       margin-top: 5%;
       .card {
-        .icon_box {
+        .skill_box {
           width: 200px;
           height: 200px;
         }

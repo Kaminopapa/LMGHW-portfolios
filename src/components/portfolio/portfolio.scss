@@ -75,7 +75,7 @@
     .next {
       color: var(--light);
       font-size: 4rem;
-      &.noClick {
+      &.un_click {
         pointer-events: none;
         opacity: 0.5;
       }

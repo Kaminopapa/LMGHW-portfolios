@@ -10,21 +10,17 @@ import {
 } from "react-icons/ai";
 import { HiOutlinePhotograph } from "react-icons/hi";
 import "./nav.css";
-import { useState } from "react";
+
 const NavigationBar = () => {
-  const [show, setShow] = useState(false);
   const dispatch = useAppDispatch();
   const tabs = (s: RootState) => s.select_nav;
   const currentTabs = useAppSelector(tabs).tab;
   const handleSelection = (name: string) => {
     dispatch(selectTab(name));
   };
-  const handleDisplay = () => {
-    setShow(!show);
-  };
 
   return (
-    <nav onClick={() => handleDisplay}>
+    <nav>
       <Navigation
         isActive={currentTabs === "Home"}
         onClick={() => handleSelection("Home")}

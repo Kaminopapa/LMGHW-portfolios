@@ -17,7 +17,7 @@ const IntroAnime: React.FC = () => {
 
   return (
     <div className="intro_animation">
-      <h1 className="saperate">Luis Hung</h1>
+      <h1 className="my_name">Luis Hung</h1>
       <div className="short_intro">
         <p>A developer who,</p>
         <h3>

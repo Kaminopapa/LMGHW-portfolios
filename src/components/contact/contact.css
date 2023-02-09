@@ -15,7 +15,6 @@
 }
 .contact_container .form_area form {
   width: 85%;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   display: grid;
@@ -60,8 +59,7 @@
   font-size: 3rem;
   margin-top: 10px;
   color: var(--color-primary);
-  -webkit-animation: loading 2s linear infinite;
-          animation: loading 2s linear infinite;
+  animation: loading 2s linear infinite;
   transform-origin: 50% 50% 0;
 }
 .contact_container .form_area .other_contact {
@@ -74,7 +72,6 @@
 }
 .contact_container .form_area .other_contact .carton_area {
   width: 85%;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   color: white;
@@ -102,10 +99,8 @@
   cursor: pointer;
 }
 .contact_container .form_area .other_contact .carton_area .sent {
-  -webkit-animation: goAway 5s ease 1;
-          animation: goAway 5s ease 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: goAway 5s ease 1;
+  animation-fill-mode: forwards;
 }
 
 .weChatQR {
@@ -120,10 +115,6 @@
 }
 
 @media (min-width: 1800px) {
-  .contact_container {
-    background: url(/logo.svg) no-repeat;
-    background-position: 50% 5rem;
-  }
   .contact_container .form_area {
     flex-flow: row;
     -moz-column-gap: 10%;
@@ -133,7 +124,6 @@
     width: 50%;
   }
   .contact_container .form_area form input[type=submit] {
-    width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
     font-size: 1rem;
@@ -189,22 +179,8 @@
     filter: grayscale(0);
   }
   .contact_container .form_area .other_contact .carton_area .mail.sent {
-    -webkit-animation: none;
-            animation: none;
-    -webkit-animation: goAway 5s ease 1;
-            animation: goAway 5s ease 1;
-  }
-}
-@-webkit-keyframes goAway {
-  0% {
-    transform: translateY(-1rem);
-  }
-  50% {
-    transform: translateY(1rem);
-  }
-  100% {
-    transform: translateY(-1000rem);
-    display: none;
+    animation: none;
+    animation: goAway 5s ease 1;
   }
 }
 @keyframes goAway {
@@ -217,14 +193,6 @@
   100% {
     transform: translateY(-1000rem);
     display: none;
-  }
-}
-@-webkit-keyframes loading {
-  0% {
-    transform: rotate(0turn);
-  }
-  100% {
-    transform: rotate(1turn);
   }
 }
 @keyframes loading {

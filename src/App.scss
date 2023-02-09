@@ -3,6 +3,7 @@
 
 :root {
   --dark: #060606;
+  --bg_light: #d3d3d3;
   --light: #ffffff;
   --small_shadow: radial-gradient(
     50% 50% at 50% 50%,
@@ -97,8 +98,7 @@ h1 {
   transition: transform 0.6s;
   position: absolute;
   top: 0;
-}
-
+} //buttons
 .btn {
   text-decoration: none;
   padding: 0.75rem 1.2rem;
@@ -118,14 +118,15 @@ h1 {
   }
 }
 
-.bye {
+.container_off {
   transform: scale(0);
   opacity: 0;
 }
 // !Light model
 .main_container.light {
-  background-color: var(--light);
+  background-color: var(--bg_light);
   transition-delay: 0.6s;
+
   h1,
   h5 {
     color: var(--dark);
@@ -135,16 +136,16 @@ h1 {
   }
   .border {
     border-color: var(--dark);
-    background-color: var(--light);
+    background-color: var(--bg_light);
     .container {
-      background-color: var(--light);
+      background-color: var(--bg_light);
       //!Home
       .home_container {
         .avatar {
           background: var(--bigShadowLight);
         }
         .intro_animation {
-          .saperate {
+          .my_name {
             opacity: 1;
             color: black;
             animation-fill-mode: backwards;
@@ -158,17 +159,17 @@ h1 {
       }
 
       //! skills
-      .bg {
-        .iconContainer {
+      .skill_container {
+        .icon_container {
           .icon_bg {
             background: var(--bigShadowLight);
-            .icon {
-              .icon_box {
+            .icons {
+              .skill_box {
                 background-color: white;
                 .active {
                   border-color: black;
                 }
-                .logo {
+                .skill_icon {
                   border: 1px solid black;
                 }
               }
@@ -192,7 +193,7 @@ h1 {
       //!AboutMe
       .about_me_container {
         .me_content {
-          .intro {
+          .about_intro {
             color: var(--dark);
             .about_cards {
               .about_card {
@@ -355,5 +356,22 @@ h1 {
     width: 89%;
     height: 89%;
     top: auto;
+  }
+}
+@keyframes open {
+  0% {
+    bottom: 3rem;
+    left: 3rem;
+    width: 0rem;
+    height: 0rem;
+    clip-path: circle(0rem at center);
+  }
+  100% {
+    //You can't use translate(-50%, -50%) to keep it aligned because it affects the container inside, so you need to animate the position
+    bottom: calc(-250vmax + 3rem);
+    left: calc(-250vmax + 3rem);
+    width: 500vmax;
+    height: 500vmax;
+    clip-path: circle(100% at center);
   }
 }

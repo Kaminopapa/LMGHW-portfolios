@@ -13,7 +13,8 @@
   img {
     width: 200px;
     height: 200px;
-    animation: breathing 1s linear infinite;
+    animation: breathing 1.5s linear infinite;
+    margin-bottom: 1rem;
   }
   animation: bye 2s linear 1;
   animation-fill-mode: forwards;
