@@ -174,7 +174,7 @@ h1 {
   border: 1px solid black;
 }
 .main_container.light .border .container .portfolio_container {
-  background-color: var(--light);
+  background-color: var(--bg_light);
 }
 .main_container.light .border .container .portfolio_container .indicators div {
   border: 1px solid var(--dark);
