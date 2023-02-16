@@ -27,24 +27,20 @@ const Skills = () => {
       id: 2,
       logo: <FaLaravel color="#F22B1D" className="skill_icon" />,
       name: "Laravel",
-      links: [
-        { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com" },
-      ],
+      links: [{ name: "Unidiy", url: "" }],
     },
     {
       id: 3,
       logo: <SiNextdotjs color="gray" className="skill_icon" />,
       name: "Next.js",
-      links: [
-        { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com" },
-      ],
+      links: [{ name: "Unidiy", url: "" }],
     },
     {
       id: 4,
       logo: <IoLogoJavascript color="yellow" className="skill_icon" />,
       name: "JavaScript",
       links: [
-        { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com" },
+        { name: "Unidiy", url: "" },
         { name: "Welcome to Venezuela", url: "https://kaminopapa.github.io/" },
       ],
     },
@@ -78,7 +74,7 @@ const Skills = () => {
       logo: <SiRedux color="purple" className="skill_icon" />,
       name: "redux",
       links: [
-        { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com" },
+        { name: "Unidiy", url: "" },
         { name: "One Book", url: "https://one-book.netlify.app/" },
       ],
     },
@@ -86,9 +82,7 @@ const Skills = () => {
       id: 9,
       logo: <FaPhp color="purple" className="skill_icon" />,
       name: "PhP",
-      links: [
-        { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com" },
-      ],
+      links: [{ name: "Unidiy", url: "" }],
     },
     {
       id: 10,
@@ -96,7 +90,7 @@ const Skills = () => {
       name: "React",
       links: [
         { name: "One Book", url: "https://one-book.netlify.app/" },
-        { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com" },
+        { name: "Unidiy", url: "" },
         {
           name: "Miley Deign",
           url: "https://kaminopapa.github.io/MileyDesignn/",
@@ -109,7 +103,7 @@ const Skills = () => {
       logo: <SiTypescript color="lightblue" className="skill_icon" />,
       name: "TypeScript",
       links: [
-        { name: "Unidiy", url: ' "https://unidiy-image-editor.weivee.com"' },
+        { name: "Unidiy", url: ' ""' },
         { name: "One Book", url: "https://one-book.netlify.app/" },
       ],
     },
@@ -117,9 +111,7 @@ const Skills = () => {
       id: 12,
       logo: <RiVuejsLine color="green" className="skill_icon" />,
       name: "Vue.js",
-      links: [
-        { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com" },
-      ],
+      links: [{ name: "Unidiy", url: "" }],
     },
   ];
   const other = skillSet.map((item, index = 1) => {
