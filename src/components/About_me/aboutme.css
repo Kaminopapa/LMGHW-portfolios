@@ -52,6 +52,7 @@
 }
 .about_me_container .me_content .about_intro p {
   margin: 1rem 0;
+  text-align: justify;
 }
 .about_me_container .me_content .doing_list {
   width: 100%;
@@ -82,6 +83,7 @@
 }
 .about_me_container .me_content .doing_list .todos .todo p {
   color: var(--color-light);
+  text-align: justify;
 }
 
 .about_icon {

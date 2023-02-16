@@ -68,27 +68,15 @@ const Card = ({
               Github
             </a>
           )}
-          {title == "UniDiy" && (
-            <a
-              href={demo}
-              className="btn btn_primary"
-              target="_blank"
-              rel="noreferrer"
-              style={{ pointerEvents: "none", background: "gray" }}
-            >
-              Coming Soon...
-            </a>
-          )}
-          {title !== "UniDiy" && (
-            <a
-              href={demo}
-              className="btn btn_primary"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Demo
-            </a>
-          )}
+
+          <a
+            href={demo}
+            className="btn btn_primary"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Demo
+          </a>
         </div>
       </div>
     </div>

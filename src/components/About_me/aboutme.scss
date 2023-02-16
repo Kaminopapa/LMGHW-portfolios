@@ -53,6 +53,7 @@
       }
       p {
         margin: 1rem 0;
+        text-align: justify;
       }
     }
     .doing_list {
@@ -75,12 +76,14 @@
         }
         .todo {
           width: 100%;
+
           h3 {
             color: var(--light);
             font-weight: bold;
           }
           p {
             color: var(--color-light);
+            text-align: justify;
           }
         }
       }

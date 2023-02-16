@@ -10,7 +10,7 @@ export default function Home() {
 
   useEffect(() => {
     window
-      .matchMedia("(min-width: 768px)")
+      .matchMedia("(min-width: 1080px)")
       .addEventListener("change", (e) => setMatches(e.matches));
   }, []);
   let size = matches ? 700 : 400;
@@ -19,7 +19,7 @@ export default function Home() {
       camera={{ position: [0, 0, 3], fov: 15 }}
       style={{
         position: "absolute",
-        left: 0,
+
         width: size,
         height: size,
       }}

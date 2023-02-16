@@ -1,7 +1,7 @@
 import "./skill.css";
 import { RiVuejsLine } from "react-icons/ri";
 import { FaLaravel, FaGithub, FaFigma, FaPhp, FaReact } from "react-icons/fa";
-import { SiNextdotjs, SiRedux, SiTypescript } from "react-icons/si";
+import { SiNextdotjs, SiRedux, SiTypescript, SiSass } from "react-icons/si";
 import { IoLogoJavascript, IoLogoCss3, IoLogoNodejs } from "react-icons/io";
 import React, { useState } from "react";
 import Header from "../UI/Header/Header";
@@ -21,33 +21,37 @@ const Skills = () => {
       id: 1,
       logo: <FaGithub color="#F51212" className="skill_icon" />,
       name: "See my jobs",
-      links: [{ name: "github", url: "https://github.com/Kaminopapa" }],
+      links: [{ name: "Github", url: "https://github.com/Kaminopapa" }],
     },
     {
       id: 2,
       logo: <FaLaravel color="#F22B1D" className="skill_icon" />,
       name: "Laravel",
-      links: [{ name: "Unidiy", url: "" }],
+      links: [
+        { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com/" },
+      ],
     },
     {
       id: 3,
-      logo: <SiNextdotjs color="gray" className="skill_icon" />,
+      logo: <SiNextdotjs color="lightgray" className="skill_icon" />,
       name: "Next.js",
-      links: [{ name: "Unidiy", url: "" }],
+      links: [
+        { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com/" },
+      ],
     },
     {
       id: 4,
       logo: <IoLogoJavascript color="yellow" className="skill_icon" />,
       name: "JavaScript",
       links: [
-        { name: "Unidiy", url: "" },
+        { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com/" },
         { name: "Welcome to Venezuela", url: "https://kaminopapa.github.io/" },
       ],
     },
     {
       id: 5,
-      logo: <IoLogoCss3 color="blue" className="skill_icon" />,
-      name: "CSS",
+      logo: <SiSass color="pink" className="skill_icon" />,
+      name: "Sass",
       links: [
         { name: "One Book", url: "https://one-book.netlify.app/" },
         {
@@ -67,14 +71,16 @@ const Skills = () => {
       id: 7,
       logo: <FaFigma color="pink" className="skill_icon" />,
       name: "Figma",
-      links: [{ name: "figma", url: "" }],
+      links: [
+        { name: "Figma", url: "https://unidiy-image-editor.weivee.com/" },
+      ],
     },
     {
       id: 8,
       logo: <SiRedux color="purple" className="skill_icon" />,
       name: "redux",
       links: [
-        { name: "Unidiy", url: "" },
+        { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com/" },
         { name: "One Book", url: "https://one-book.netlify.app/" },
       ],
     },
@@ -82,7 +88,9 @@ const Skills = () => {
       id: 9,
       logo: <FaPhp color="purple" className="skill_icon" />,
       name: "PhP",
-      links: [{ name: "Unidiy", url: "" }],
+      links: [
+        { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com/" },
+      ],
     },
     {
       id: 10,
@@ -90,7 +98,7 @@ const Skills = () => {
       name: "React",
       links: [
         { name: "One Book", url: "https://one-book.netlify.app/" },
-        { name: "Unidiy", url: "" },
+        { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com/" },
         {
           name: "Miley Deign",
           url: "https://kaminopapa.github.io/MileyDesignn/",
@@ -103,15 +111,18 @@ const Skills = () => {
       logo: <SiTypescript color="lightblue" className="skill_icon" />,
       name: "TypeScript",
       links: [
-        { name: "Unidiy", url: ' ""' },
+        { name: "Unidiy", url: ' "https://unidiy-image-editor.weivee.com/"' },
         { name: "One Book", url: "https://one-book.netlify.app/" },
       ],
     },
     {
       id: 12,
       logo: <RiVuejsLine color="green" className="skill_icon" />,
+
       name: "Vue.js",
-      links: [{ name: "Unidiy", url: "" }],
+      links: [
+        { name: "Unidiy", url: "https://unidiy-image-editor.weivee.com/" },
+      ],
     },
   ];
   const other = skillSet.map((item, index = 1) => {
@@ -127,8 +138,13 @@ const Skills = () => {
             <ul className="sci">
               {item.links.map((link) => (
                 <li key={link.name}>
-                  <a href={link.url} target="_blank" rel="noreferrer">
-                    <MdOutlineVisibility />
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    title={link.name}
+                  >
+                    {link.name.substring(0, 3)}
                   </a>
                 </li>
               ))}

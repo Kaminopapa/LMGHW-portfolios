@@ -166,11 +166,8 @@ h1 {
             .icons {
               .skill_box {
                 background-color: white;
-                .active {
+                &.active {
                   border-color: black;
-                }
-                .skill_icon {
-                  border: 1px solid black;
                 }
               }
             }
