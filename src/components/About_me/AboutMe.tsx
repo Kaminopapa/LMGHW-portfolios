@@ -10,17 +10,14 @@ import { CgGym } from "react-icons/cg";
 import { MdSnowboarding } from "react-icons/md";
 const AboutMe = () => {
   const dispatch = useAppDispatch();
-
   const toContact = () => {
     dispatch(selectTab("contact"));
   };
   return (
     <div className="about_me_container">
       <Header subTitle="Get To Know" mainTitle="Me" />
-
       <div className="me_content">
         <img src="/aboutmerec.jpg" alt="" />
-
         <div className="about_intro">
           <div className="about_cards">
             <div className="about_card">
@@ -58,7 +55,6 @@ const AboutMe = () => {
         </div>
         <div className="doing_list">
           <h2>What I do</h2>
-
           <div className="todos">
             <FaConnectdevelop className="about_icon" />
             <div className="todo">
@@ -115,7 +111,6 @@ const AboutMe = () => {
               </p>
             </div>
           </div>
-
           <div className="todos">
             <CgGym className="about_icon" />
             <div className="todo">
