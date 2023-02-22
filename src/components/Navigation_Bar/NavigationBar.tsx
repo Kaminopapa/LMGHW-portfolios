@@ -10,17 +10,21 @@ import {
 } from "react-icons/ai";
 import { HiOutlinePhotograph } from "react-icons/hi";
 import "./nav.css";
+import { useEffect, useState } from "react";
 
 const NavigationBar = () => {
   const dispatch = useAppDispatch();
   const tabs = (s: RootState) => s.select_nav;
-  const currentTabs = useAppSelector(tabs).tab;
+  const navSelector = useAppSelector(tabs);
+  const currentTabs = navSelector.tab;
+  const isDown = navSelector.down;
+
   const handleSelection = (name: string) => {
     dispatch(selectTab(name));
   };
 
   return (
-    <nav>
+    <nav className={isDown ? "hidden" : ""}>
       <Navigation
         isActive={currentTabs === "Home"}
         onClick={() => handleSelection("Home")}

@@ -1,7 +1,12 @@
 import { useState, FC } from "react";
 
 import Header from "../UI/Header/Header";
-import { AiOutlineMail, AiOutlineWhatsApp, AiFillWechat } from "react-icons/ai";
+import {
+  AiOutlineMail,
+  AiOutlineWhatsApp,
+  AiFillWechat,
+  AiOutlineSlack,
+} from "react-icons/ai";
 import { RiMailOpenLine } from "react-icons/ri";
 import { CgSpinner } from "react-icons/cg";
 import "./contact.css";
@@ -116,6 +121,14 @@ const Contact = () => {
                 </div>
               </Modal>
             )}
+            <a
+              href="https://luisworkspaceworld.slack.com/archives/D04QU980G9Z"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {" "}
+              <AiOutlineSlack className="mail" />
+            </a>
           </div>
         </div>
         <form onSubmit={handleSubmit}>

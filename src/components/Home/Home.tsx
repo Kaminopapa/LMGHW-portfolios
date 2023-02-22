@@ -11,7 +11,6 @@ const Home = () => {
   const toContact = () => {
     dispatch(selectTab("contact"));
   };
-
   return (
     <div className="home_container">
       <div className="avatar">

@@ -79,7 +79,7 @@
   justify-content: space-evenly;
   align-items: center;
   position: absolute;
-  bottom: 3rem;
+  bottom: 5rem;
   background: rgba(255, 248, 248, 0.01);
   border: 2px solid rgba(255, 255, 255, 0.19);
   box-shadow: 5px 10px 20px #5f8459;
@@ -95,7 +95,7 @@
 .contact_container .form_area .other_contact .carton_area .mail {
   font-size: 3rem;
   color: var(--color-primary);
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   cursor: pointer;
 }
 .contact_container .form_area .other_contact .carton_area .sent {
@@ -173,6 +173,7 @@
     bottom: -5rem;
   }
   .contact_container .form_area .other_contact .carton_area .mail {
+    margin: 1rem 0;
     filter: grayscale(1);
   }
   .contact_container .form_area .other_contact .carton_area .mail:hover {

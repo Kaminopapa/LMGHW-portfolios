@@ -4,18 +4,36 @@ import { FaAward } from "react-icons/fa";
 import { BiCodeCurly } from "react-icons/bi";
 import { VscFolderLibrary } from "react-icons/vsc";
 import { useAppDispatch } from "../../store";
-import { selectTab } from "../../store/navSlice";
+import { isDown, selectTab } from "../../store/navSlice";
 import { FaConnectdevelop, FaGuitar } from "react-icons/fa";
 import { CgGym } from "react-icons/cg";
 import { MdSnowboarding } from "react-icons/md";
+import { useEffect, useRef, useState } from "react";
 const AboutMe = () => {
   const dispatch = useAppDispatch();
 
   const toContact = () => {
     dispatch(selectTab("contact"));
   };
+  const myDiv = useRef<HTMLDivElement>(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [matches, setMatches] = useState(
+    window.matchMedia("(min-width:1080px)").matches
+  );
+  const handleScroll = () => {
+    const position = myDiv.current?.scrollTop ?? 0;
+    if (!matches) {
+      dispatch(isDown(position > scrollPosition));
+    }
+    setScrollPosition(position);
+  };
+  useEffect(() => {
+    window
+      .matchMedia("(min-width: 1080px)")
+      .addEventListener("change", (e) => setMatches(e.matches));
+  }, []);
   return (
-    <div className="about_me_container">
+    <div ref={myDiv} className="about_me_container" onScroll={handleScroll}>
       <Header subTitle="Get To Know" mainTitle="Me" />
 
       <div className="me_content">
