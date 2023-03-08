@@ -6,7 +6,6 @@ import { IoLogoJavascript, IoLogoCss3, IoLogoNodejs } from "react-icons/io";
 import React, { useState } from "react";
 import Header from "../UI/Header/Header";
 
-import { MdOutlineVisibility } from "react-icons/md";
 const Skills = () => {
   const [active, setActive] = useState(1);
   const position = (val: number) => {
@@ -143,6 +142,7 @@ const Skills = () => {
                     target="_blank"
                     rel="noreferrer"
                     title={link.name}
+                    tabIndex={0}
                   >
                     {link.name.substring(0, 3)}
                   </a>
@@ -169,8 +169,14 @@ const Skills = () => {
                   style={position(index)}
                   key={skill.id}
                   onClick={() => handleActive(skill.id)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      handleActive(skill.id);
+                    }
+                  }}
                   data-id={`content${index}`}
                   onMouseEnter={() => handleActive(skill.id)}
+                  tabIndex={0}
                 >
                   {skill.logo}
                 </div>

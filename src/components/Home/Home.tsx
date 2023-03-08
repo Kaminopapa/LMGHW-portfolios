@@ -19,10 +19,10 @@ const Home = () => {
       <div className="name_container">
         <IntroAnime />
         <div className="cta">
-          <a className="btn" onClick={toContact}>
+          <a className="btn" onClick={toContact} tabIndex={0}>
             contact
           </a>
-          <a href={CV} download className="btn btn_primary">
+          <a href={CV} download className="btn btn_primary" tabIndex={0}>
             Download CV
           </a>
         </div>

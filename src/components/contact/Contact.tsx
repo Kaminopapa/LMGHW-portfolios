@@ -93,7 +93,9 @@ const Contact = () => {
             <h3>Front End Developer</h3>
             <p>
               <strong>Email:</strong>{" "}
-              <a href="mailto:luishung1996@gmail.com">luishung1996@gmail.com</a>
+              <a href="mailto:luishung.workspace@gmail.com">
+                luishung.workspace@gmail.com
+              </a>
             </p>
             <p>
               <strong>Phone:</strong> 778-302-8624
@@ -106,18 +108,40 @@ const Contact = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <AiOutlineWhatsApp className="mail" />
+              <AiOutlineWhatsApp
+                tabIndex={0}
+                className="mail"
+                aria-label="whats App"
+              />
             </a>
             {isSent ? (
-              <AiOutlineMail className="mail sent" />
+              <AiOutlineMail
+                tabIndex={0}
+                className="mail sent"
+                aria-label="gmail sent"
+              />
             ) : (
-              <RiMailOpenLine className="mail" />
+              <RiMailOpenLine
+                tabIndex={0}
+                className="mail"
+                aria-label="gmail"
+              />
             )}
-            <AiFillWechat className="mail" onClick={() => setShowModal(true)} />
+            <AiFillWechat
+              tabIndex={0}
+              aria-label="We chat"
+              className="mail"
+              onClick={() => setShowModal(true)}
+              onKeyDown={(e) => {
+                if (e.key == "Enter") {
+                  setShowModal(!showModal);
+                }
+              }}
+            />
             {showModal && (
               <Modal>
                 <div className="weChatQR" onClick={() => setShowModal(false)}>
-                  <img src="/QR.JPG" alt="wecaht scan" />
+                  <img src="/QR.JPG" alt="we chat QR code for scan" />
                 </div>
               </Modal>
             )}
@@ -127,7 +151,11 @@ const Contact = () => {
               rel="noreferrer"
             >
               {" "}
-              <AiOutlineSlack className="mail" />
+              <AiOutlineSlack
+                tabIndex={0}
+                className="mail"
+                aria-label="Slack"
+              />
             </a>
           </div>
         </div>

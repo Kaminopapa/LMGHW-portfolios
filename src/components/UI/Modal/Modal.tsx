@@ -23,6 +23,7 @@ export default function Modal({ children }: ModalProps) {
     <>
       {createPortal(
         <div
+          tabIndex={0}
           style={{
             position: "fixed",
             top: 0,

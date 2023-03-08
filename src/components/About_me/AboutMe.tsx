@@ -41,23 +41,23 @@ const AboutMe = () => {
 
         <div className="about_intro">
           <div className="about_cards">
-            <div className="about_card">
+            <div className="about_card" tabIndex={0}>
               <FaAward className="about_icon" />
               <h5>Langara College</h5>
               <small>CS</small>
             </div>
-            <div className="about_card">
+            <div className="about_card" tabIndex={0}>
               <BiCodeCurly className="about_icon" />
               <h5>Coding Experiences</h5>
               <small>3+years</small>
             </div>
-            <div className="about_card">
+            <div className="about_card" tabIndex={0}>
               <VscFolderLibrary className="about_icon" />
               <h5>Projects</h5>
               <small>20+ projects</small>
             </div>
           </div>
-          <p>
+          <p tabIndex={0}>
             Heellooo~ This is Luis from Venezuela.
             <br />
             When I first printed 'Hello World,' I was immediately captivated by
@@ -70,14 +70,23 @@ const AboutMe = () => {
             passion for software development, and it's a pursuit that brings me
             endless joy and fulfillment.
           </p>
-          <a className="btn btn_primary" onClick={toContact}>
+          <a
+            className="btn btn_primary"
+            onClick={toContact}
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key == "Enter") {
+                toContact();
+              }
+            }}
+          >
             Let's Talk
           </a>
         </div>
         <div className="doing_list">
           <h2>What I do</h2>
 
-          <div className="todos">
+          <div className="todos" tabIndex={0}>
             <FaConnectdevelop className="about_icon" />
             <div className="todo">
               <h3>Front end developer</h3>
@@ -96,7 +105,7 @@ const AboutMe = () => {
               </p>
             </div>
           </div>
-          <div className="todos">
+          <div className="todos" tabIndex={0}>
             <MdSnowboarding className="about_icon" />
             <div className="todo">
               <h3>Snowboarding</h3>
@@ -115,7 +124,7 @@ const AboutMe = () => {
               </p>
             </div>
           </div>
-          <div className="todos">
+          <div className="todos" tabIndex={0}>
             <FaGuitar className="about_icon" />
             <div className="todo">
               <h3>Play Guitar</h3>
@@ -134,7 +143,7 @@ const AboutMe = () => {
             </div>
           </div>
 
-          <div className="todos">
+          <div className="todos" tabIndex={0}>
             <CgGym className="about_icon" />
             <div className="todo">
               <h3>GYM</h3>

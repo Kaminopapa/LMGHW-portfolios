@@ -15,9 +15,6 @@ nav {
           backdrop-filter: blur(15px);
   transition: transform 0.3s ease-in-out;
 }
-nav.hidden {
-  transform: translate(-50%, 110%);
-}
 
 nav a {
   background: transparent;
@@ -79,7 +76,7 @@ nav a.active {
     animation: jump 7s linear infinite;
     z-index: 12;
   }
-  nav:hover {
+  nav:hover, nav:focus {
     left: 0;
     transition: left 0.03s;
     animation: reverse;

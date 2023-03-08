@@ -10,48 +10,51 @@ import {
 } from "react-icons/ai";
 import { HiOutlinePhotograph } from "react-icons/hi";
 import "./nav.css";
-import { useEffect, useState } from "react";
 
 const NavigationBar = () => {
   const dispatch = useAppDispatch();
   const tabs = (s: RootState) => s.select_nav;
   const navSelector = useAppSelector(tabs);
   const currentTabs = navSelector.tab;
-  const isDown = navSelector.down;
 
   const handleSelection = (name: string) => {
     dispatch(selectTab(name));
   };
 
   return (
-    <nav className={isDown ? "hidden" : ""}>
+    <nav tabIndex={0}>
       <Navigation
         isActive={currentTabs === "Home"}
         onClick={() => handleSelection("Home")}
+        label="Home"
       >
         <AiOutlineHome />
       </Navigation>
       <Navigation
         isActive={currentTabs === "about_me"}
         onClick={() => handleSelection("about_me")}
+        label="About me"
       >
         <AiOutlineUser />
       </Navigation>
       <Navigation
         isActive={currentTabs === "portfolio"}
         onClick={() => handleSelection("portfolio")}
+        label="portfolio"
       >
         <AiOutlineBook />
       </Navigation>
       <Navigation
         isActive={currentTabs === "skill"}
         onClick={() => handleSelection("skill")}
+        label="skill"
       >
         <HiOutlinePhotograph />
       </Navigation>
       <Navigation
         isActive={currentTabs === "contact"}
         onClick={() => handleSelection("contact")}
+        label="contact"
       >
         <AiOutlineMessage />
       </Navigation>

@@ -117,19 +117,19 @@
   }
   45% {
     opacity: 1;
-    text-shadow: 0 0 10px hsl(0deg, 0%, 100%);
+    text-shadow: 0 0 10px hsl(0, 0%, 100%);
   }
   60% {
     opacity: 1;
-    text-shadow: 0 0 40px hsl(0deg, 0%, 100%);
+    text-shadow: 0 0 40px hsl(0, 0%, 100%);
   }
   75% {
     opacity: 1;
-    text-shadow: 0 0 10px hsl(0deg, 0%, 100%);
+    text-shadow: 0 0 10px hsl(0, 0%, 100%);
   }
   90% {
     opacity: 1;
-    text-shadow: 0 0 5px hsl(0deg, 0%, 100%);
+    text-shadow: 0 0 5px hsl(0, 0%, 100%);
   }
   100% {
     opacity: 1;

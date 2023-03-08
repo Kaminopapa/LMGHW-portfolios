@@ -290,12 +290,54 @@ h1 {
     background-color: var(--color-primary);
   }
 }
-
+.tips {
+  width: 90%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.521);
+  position: relative;
+  border-radius: 10px;
+  .arrow {
+    font-size: 8rem;
+    color: white;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+  }
+  p {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  button {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--color-primary);
+    border: none;
+    font-size: 1.2rem;
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+    border-radius: 0 0 10px 10px;
+  }
+}
 @media (min-width: 768px) {
   .main_container {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .tips {
+    width: 50%;
+    p {
+      font-size: 2rem;
+    }
+    button {
+      font-size: 1.6rem;
+    }
   }
 
   .main_container.light nav {
