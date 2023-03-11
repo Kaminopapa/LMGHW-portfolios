@@ -107,7 +107,7 @@ const Carousel = () => {
           style={{ background: "#121212" }}
         />
       ),
-      title: "UniDiy",
+      title: "Design A",
       description:
         "An e-commerce plug-in for WeChat with robust features for customized phone cases.",
       demo: "https://unidiy-image-editor.weivee.com/",
