@@ -1,22 +1,22 @@
-import React, { useEffect, useState } from "react";
-import Card from "../UI/Card/Card";
-import Header from "../UI/Header/Header";
-import { useSwipeable } from "react-swipeable";
-import { MdArrowLeft, MdArrowRight } from "react-icons/md";
-import { AiFillWechat } from "react-icons/ai";
-import "./portfolio.css";
+import React, { useEffect, useState } from 'react';
+import Card from '../UI/Card/Card';
+import Header from '../UI/Header/Header';
+import { useSwipeable } from 'react-swipeable';
+import { MdArrowLeft, MdArrowRight } from 'react-icons/md';
+
+import './portfolio.css';
 interface propsItem {
   children: React.ReactNode;
 }
 const Item = ({ children }: propsItem) => {
   return (
-    <div className="card" id="someid">
+    <div className='card' id='someid'>
       {children}
     </div>
   );
 };
 const Portfolio = ({ children }: any) => {
-  const [activeCard, setActiveCard] = useState(0); //start from the middle
+  const [activeCard, setActiveCard] = useState(0); // start from the middle
   const [paused, setPaused] = useState(false);
 
   const updateIndex = (newIndex: number) => {
@@ -46,16 +46,16 @@ const Portfolio = ({ children }: any) => {
   });
 
   return (
-    <div className="portfolio_container">
-      <Header subTitle="My Recent Works" mainTitle="Portfolios" />
+    <div className='portfolio_container'>
+      <Header subTitle='My Recent Works' mainTitle='Portfolios' />
       <div
         {...handleSwipe}
-        className="cards_container"
+        className='cards_container'
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
         <div
-          className="card_box"
+          className='card_box'
           style={{
             transform: `translateZ(-700px) rotateY(-${activeCard * 72}deg)`,
           }}
@@ -65,9 +65,9 @@ const Portfolio = ({ children }: any) => {
           })}
         </div>
       </div>
-      <div className="indicators">
+      <div className='indicators'>
         <MdArrowLeft
-          className={activeCard == 0 ? "prev un_click" : "prev"}
+          className={activeCard == 0 ? 'prev un_click' : 'prev'}
           onClick={() => {
             updateIndex(activeCard - 1);
           }}
@@ -76,18 +76,14 @@ const Portfolio = ({ children }: any) => {
         {React.Children.map(children, (child, index) => {
           return (
             <div
-              className={index === activeCard ? "active" : ""}
+              className={index === activeCard ? 'active' : ''}
               onClick={() => updateIndex(index)}
             ></div>
           );
         })}
 
         <MdArrowRight
-          className={
-            activeCard == React.Children.count(children) - 1
-              ? "next un_click"
-              : "next"
-          }
+          className={activeCard == React.Children.count(children) - 1 ? 'next un_click' : 'next'}
           onClick={() => {
             updateIndex(activeCard + 1);
           }}
@@ -97,69 +93,62 @@ const Portfolio = ({ children }: any) => {
   );
 };
 const Carousel = () => {
-  const my_works = [
+  const myWorks = [
     {
       id: 1,
-      image: (
-        <AiFillWechat
-          color="white"
-          className="card_side front"
-          style={{ background: "#121212" }}
-        />
-      ),
-      title: "Design A",
+      image: '/DesignA.png',
+      title: 'Design A',
       description:
-        "An e-commerce plug-in for WeChat with robust features for customized phone cases.",
-      demo: "https://unidiy-image-editor.weivee.com/",
+        'An e-commerce plug-in for WeChat with robust features for customized phone cases.',
+      demo: 'https://designa-editor.nikola.vip/',
       finished: true,
     },
     {
       id: 2,
-      image: "/onebook.png",
-      title: "ONE BOOK",
-      description: "E-book web application built with React and TypeScript. ",
-      github: "https://github.com/Kaminopapa/OneBook",
-      demo: "https://one-book.netlify.app/",
+      image: '/onebook.png',
+      title: 'ONE BOOK',
+      description: 'E-book web application built with React and TypeScript. ',
+      github: 'https://github.com/Kaminopapa/OneBook',
+      demo: 'https://one-book.netlify.app/',
       finished: true,
     },
     {
       id: 3,
-      image: "/mileyLogo.png",
-      title: "Miley Design",
+      image: '/mileyLogo.png',
+      title: 'Miley Design',
       description:
-        "Miley's portfolio website built with ReactJS featuring fully responsive design.",
-      github: "https://github.com/Kaminopapa/MileyDesignn",
-      demo: "https://kaminopapa.github.io/MileyDesignn/",
+        'Miley &apos; s portfolio website built with ReactJS featuring fully responsive design.',
+      github: 'https://github.com/Kaminopapa/MileyDesignn',
+      demo: 'https://kaminopapa.github.io/MileyDesignn/',
       finished: false,
     },
 
     {
       id: 4,
-      image: "/ven2.jpg",
-      title: "Welcome to Venezuela",
-      description: "A travel interface about Venezuela.",
-      github: "https://github.com/Kaminopapa/Kaminopapa.github.io",
-      demo: "https://kaminopapa.github.io/",
+      image: '/ven2.jpg',
+      title: 'Welcome to Venezuela',
+      description: 'A travel interface about Venezuela.',
+      github: 'https://github.com/Kaminopapa/Kaminopapa.github.io',
+      demo: 'https://kaminopapa.github.io/',
       finished: false,
     },
 
     {
       id: 5,
-      image: "/course.jpg",
-      title: "MERN Project",
-      description:
-        "A full-stack project offering online courses for teachers and students. ",
-      github: "https://github.com/Kaminopapa/CourseResgister",
-      demo: "https://studynet.netlify.app/",
+      image: '/course.jpg',
+      title: 'MERN Project',
+      description: 'A full-stack project offering online courses for teachers and students. ',
+      github: 'https://github.com/Kaminopapa/CourseResgister',
+      demo: 'https://studynet.netlify.app/',
       finished: false,
     },
   ];
 
   return (
     <Portfolio>
-      {my_works.map((item) => {
+      {myWorks.map((item) => {
         return (
-          <Item key={"p" + item.id}>
+          <Item key={'p' + item.id}>
             <Card
               image={item.image}
               github={item.github}

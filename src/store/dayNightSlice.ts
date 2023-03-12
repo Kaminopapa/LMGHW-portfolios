@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 interface initial {
   isDay: boolean;
 }
@@ -8,7 +8,7 @@ const initialState: initial = {
 };
 
 const dayNightSlice = createSlice({
-  name: "day_night_mode",
+  name: 'dayNightMode',
   initialState,
   reducers: {
     toggleMode(state, action: PayloadAction<boolean>) {

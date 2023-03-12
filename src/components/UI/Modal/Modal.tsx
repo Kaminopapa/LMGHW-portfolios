@@ -1,7 +1,7 @@
-import { useEffect, useRef, ReactNode } from "react";
-import { createPortal } from "react-dom";
+import { useEffect, useRef, ReactNode } from 'react';
+import { createPortal } from 'react-dom';
 
-const modalRoot = document.querySelector("#modal") as HTMLElement;
+const modalRoot = document.querySelector('#modal') as HTMLElement;
 
 type ModalProps = {
   children: ReactNode;
@@ -9,7 +9,7 @@ type ModalProps = {
 
 export default function Modal({ children }: ModalProps) {
   const elRef = useRef<HTMLDivElement | null>(null);
-  if (!elRef.current) elRef.current = document.createElement("div");
+  if (!elRef.current) elRef.current = document.createElement('div');
 
   useEffect(() => {
     const el = elRef.current!;
@@ -25,21 +25,21 @@ export default function Modal({ children }: ModalProps) {
         <div
           tabIndex={0}
           style={{
-            position: "fixed",
+            position: 'fixed',
             top: 0,
             left: 0,
-            width: "100%",
-            height: "100vh",
+            width: '100%',
+            height: '100vh',
             zIndex: 10,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            backdropFilter: "blur(2px)",
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            backdropFilter: 'blur(2px)',
           }}
         >
           {children}
         </div>,
-        elRef.current
+        elRef.current,
       )}
     </>
   );

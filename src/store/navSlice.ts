@@ -1,16 +1,16 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 interface initial {
   tab: string;
   down: boolean;
 }
 
 const initialState: initial = {
-  tab: "Home",
+  tab: 'Home',
   down: false,
 };
 
 const navSlice = createSlice({
-  name: "select_nav",
+  name: 'selectNav',
   initialState,
   reducers: {
     selectTab(state, action: PayloadAction<string>) {

@@ -1,4 +1,4 @@
-import { useTransition } from "react";
+import { useTransition } from 'react';
 interface tabProps {
   isActive: boolean;
   onClick: () => void;
@@ -9,14 +9,14 @@ export default function Navigation(props: tabProps) {
   const [isPending, startTransition] = useTransition();
   if (props.isActive) {
     return (
-      <a className="active" aria-label={props.label}>
+      <a className='active' aria-label={props.label}>
         {props.children}
       </a>
     );
   }
   if (isPending) {
     return (
-      <a className="pending" aria-label={props.label}>
+      <a className='pending' aria-label={props.label}>
         {props.children}
       </a>
     );
@@ -29,7 +29,7 @@ export default function Navigation(props: tabProps) {
         });
       }}
       onKeyDown={(event) => {
-        if (event.key === "Enter") {
+        if (event.key === 'Enter') {
           startTransition(() => {
             props.onClick();
           });

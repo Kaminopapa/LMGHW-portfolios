@@ -1,24 +1,23 @@
-import { Suspense, useEffect, useState } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-import { Model } from "./MyAvatar";
+/* eslint-disable react/no-unknown-property */
+import { Suspense, useEffect, useState } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
+import { Model } from './MyAvatar';
 
 export default function Home() {
-  const [matches, setMatches] = useState(
-    window.matchMedia("(min-width:1080px)").matches
-  );
+  const [matches, setMatches] = useState(window.matchMedia('(min-width:1080px)').matches);
 
   useEffect(() => {
     window
-      .matchMedia("(min-width: 1080px)")
-      .addEventListener("change", (e) => setMatches(e.matches));
+      .matchMedia('(min-width: 1080px)')
+      .addEventListener('change', (e) => setMatches(e.matches));
   }, []);
-  let size = matches ? 700 : 400;
+  const size = matches ? 700 : 400;
   return (
     <Canvas
       camera={{ position: [0, 0, 3], fov: 15 }}
       style={{
-        position: "absolute",
+        position: 'absolute',
 
         width: size,
         height: size,

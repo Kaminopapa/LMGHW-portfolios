@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { IoIosConstruct } from "react-icons/io";
-import { AiFillCheckCircle } from "react-icons/ai";
-import "./card.css";
+import React, { useState } from 'react';
+import { IoIosConstruct } from 'react-icons/io';
+import { AiFillCheckCircle } from 'react-icons/ai';
+import './card.css';
 interface cardProps {
   image: string | React.ReactNode;
   demo: string;
@@ -10,71 +10,55 @@ interface cardProps {
   description?: string;
   inProgress: boolean;
 }
-const Card = ({
-  image,
-  demo,
-  github,
-  title,
-  description,
-  inProgress,
-}: cardProps) => {
-  const [show, setShow] = useState(false); //mobile rotate
+const Card = ({ image, demo, github, title, description, inProgress }: cardProps) => {
+  const [show, setShow] = useState(false); // mobile rotate
 
   return (
     <div
-      className="card_content"
+      className='card_content'
       onTouchEnd={() => setShow(!show)}
       onMouseEnter={() => setShow(true)}
       onMouseLeave={() => setShow(false)}
     >
-      {" "}
-      {typeof image === "string" && (
+      {' '}
+      {typeof image === 'string' && (
         <img
           src={image}
-          alt=""
-          className="card_side front"
-          style={
-            show
-              ? { transform: "rotateY(180deg)", backfaceVisibility: "hidden" }
-              : {}
-          }
+          alt=''
+          className='card_side front'
+          style={show ? { transform: 'rotateY(180deg)', backfaceVisibility: 'hidden' } : {}}
         />
       )}
-      {typeof image !== "string" && image}
+      {typeof image !== 'string' && image}
       <div
-        className="card_side back"
+        className='card_side back'
         style={
           show
             ? {
-                transform: "rotateY(0deg)",
+                transform: 'rotateY(0deg)',
                 opacity: 1,
               }
             : {}
         }
       >
-        <div className="badge">
+        <div className='badge'>
           {inProgress ? (
-            <IoIosConstruct color="orange" />
+            <IoIosConstruct color='orange' />
           ) : (
-            <AiFillCheckCircle color="lightGreen" />
+            <AiFillCheckCircle color='lightGreen' />
           )}
         </div>
         <h2>{title}</h2>
         <p>{description}</p>
 
-        <div className="link_group">
+        <div className='link_group'>
           {github && (
-            <a href={github} className="btn" target="_blank" rel="noreferrer">
+            <a href={github} className='btn' target='_blank' rel='noreferrer'>
               Github
             </a>
           )}
 
-          <a
-            href={demo}
-            className="btn btn_primary"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href={demo} className='btn btn_primary' target='_blank' rel='noreferrer'>
             Demo
           </a>
         </div>

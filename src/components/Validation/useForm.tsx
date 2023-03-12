@@ -1,5 +1,5 @@
-import { ChangeEvent, FormEvent, useState } from "react";
-import emailjs from "@emailjs/browser";
+import { ChangeEvent, FormEvent, useState } from 'react';
+import emailjs from '@emailjs/browser';
 interface Validation {
   required?: {
     value: boolean;
@@ -15,9 +15,9 @@ interface Validation {
   };
 }
 type ErrorRecord<T> = Partial<Record<keyof T, string>>;
-type Validations<T extends {}> = Partial<Record<keyof T, Validation>>;
+type Validations<T extends object> = Partial<Record<keyof T, Validation>>;
 
-const useForm = <T extends Record<keyof T, any> = {}>(options?: {
+const useForm = <T extends Record<keyof T, any> = object>(options?: {
   validations?: Validations<T>;
   initialValues?: Partial<T>;
   onSubmit?: () => void;
@@ -27,7 +27,7 @@ const useForm = <T extends Record<keyof T, any> = {}>(options?: {
   const [isSent, setIsSetn] = useState(false);
 
   const handleChange =
-    <S extends unknown>(key: keyof T, sanitizeFn?: (value: string) => S) =>
+    <S,>(key: keyof T, sanitizeFn?: (value: string) => S) =>
     (e: ChangeEvent<HTMLInputElement & HTMLTextAreaElement>) => {
       const value = sanitizeFn ? sanitizeFn(e.target.value) : e.target.value;
       setData({
@@ -67,27 +67,20 @@ const useForm = <T extends Record<keyof T, any> = {}>(options?: {
     }
     setErrors({});
     if (options?.onSubmit) {
-      emailjs
-        .send(
-          `${import.meta.env.VITE_EMAILJS_SERVICE_KEY}`,
-          `${import.meta.env.VITE_EMAILJS_TEMPLATE_KEY}`,
-          data,
-          `${import.meta.env.VITE_EMAILJS_PUBLIC_KEY}`
-        )
-        .then(
-          (response) => {
-            setIsSetn(true);
-            const time = setInterval(() => {
-              setIsSetn(false);
-              setData(options.initialValues as T);
-            }, 7000);
-            return () => clearInterval(time);
-          },
-          (error) => {
+      emailjs.send('service_pstf0zo', 'template_6lxm2yp', data, 'Sqk_Chpccz1amAO2T').then(
+        (response) => {
+          setIsSetn(true);
+          const time = setInterval(() => {
             setIsSetn(false);
-            return;
-          }
-        );
+            setData(options.initialValues as T);
+          }, 7000);
+          return () => clearInterval(time);
+        },
+        (error) => {
+          setIsSetn(false);
+          return;
+        },
+      );
     }
   };
   return {
