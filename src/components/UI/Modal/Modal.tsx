@@ -12,7 +12,8 @@ export default function Modal({ children }: ModalProps) {
   if (!elRef.current) elRef.current = document.createElement('div');
 
   useEffect(() => {
-    const el = elRef.current!;
+    const el = elRef.current;
+    if (!el) return;
     modalRoot.appendChild(el);
     return () => {
       modalRoot.removeChild(el);
